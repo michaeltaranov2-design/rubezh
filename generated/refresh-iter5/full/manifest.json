@@ -1,0 +1,2584 @@
+{
+  "blender": "5.2.2 LTS",
+  "status": "validated",
+  "assets": [
+    {
+      "id": "pistol_klyn",
+      "name": "Пистолет «Клин»",
+      "lods": [
+        {
+          "triangles": 2336,
+          "budget": 2500,
+          "bytes": 605564,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 11,
+            "maxRayDistanceMeters": 0.033600000000000005,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.20888833230351164,
+            "vertexMin": 0.38,
+            "vertexMean": 0.5095107660281772,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 11,
+          "components": [
+            "barrel",
+            "grip",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "safety_lever",
+            "slide",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 696,
+          "budget": 1200,
+          "bytes": 460708,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 11,
+            "maxRayDistanceMeters": 0.033600000000000005,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.20124939143923776,
+            "vertexMin": 0.38,
+            "vertexMean": 0.5047746226923274,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 11,
+          "components": [
+            "barrel",
+            "grip",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "safety_lever",
+            "slide",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 124,
+          "budget": 300,
+          "bytes": 405332,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 9,
+            "maxRayDistanceMeters": 0.033600000000000005,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.44756946824491023,
+            "vertexMin": 0.38,
+            "vertexMean": 0.6574930703118443,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 9,
+          "components": [
+            "barrel",
+            "grip",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "slide",
+            "trigger"
+          ]
+        }
+      ],
+      "meshObjects": 11,
+      "lodDistancesMeters": [
+        0,
+        12,
+        30
+      ],
+      "lodSwitching": "настраивается в проекте Godot",
+      "skins": [
+        {
+          "index": 0,
+          "name": "Пистолет «Клин» — Графитовый контур",
+          "pattern": "шестиугольная насечка",
+          "material": "pistol_klyn_skin_graphite_outline",
+          "atlasUvOffset": [
+            0.0,
+            0.0
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.0,
+            0.3333333333333333
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Пистолет «Клин» — Полярный импульс",
+          "pattern": "диагональный шеврон",
+          "material": "pistol_klyn_skin_polar_pulse",
+          "atlasUvOffset": [
+            0.0,
+            0.3333333333333333
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.3333333333333333,
+            0.6666666666666666
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Пистолет «Клин» — Пыльный код",
+          "pattern": "ломаная сервисная линия",
+          "material": "pistol_klyn_skin_dust_code",
+          "atlasUvOffset": [
+            0.0,
+            0.6666666666666666
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.6666666666666666,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pistol_duga",
+      "name": "Пистолет «Дуга»",
+      "lods": [
+        {
+          "triangles": 2484,
+          "budget": 2500,
+          "bytes": 617812,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 11,
+            "maxRayDistanceMeters": 0.0384,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.1989751757379165,
+            "vertexMin": 0.38,
+            "vertexMean": 0.5033646089575082,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 11,
+          "components": [
+            "barrel",
+            "grip",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "safety_lever",
+            "slide",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 696,
+          "budget": 1200,
+          "bytes": 460708,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 11,
+            "maxRayDistanceMeters": 0.0384,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.23696367934878385,
+            "vertexMin": 0.38,
+            "vertexMean": 0.5269174811962459,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 11,
+          "components": [
+            "barrel",
+            "grip",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "safety_lever",
+            "slide",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 124,
+          "budget": 300,
+          "bytes": 405320,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 9,
+            "maxRayDistanceMeters": 0.0384,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.42881946712732316,
+            "vertexMin": 0.38,
+            "vertexMean": 0.6458680696189403,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 9,
+          "components": [
+            "barrel",
+            "grip",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "slide",
+            "trigger"
+          ]
+        }
+      ],
+      "meshObjects": 11,
+      "lodDistancesMeters": [
+        0,
+        12,
+        30
+      ],
+      "lodSwitching": "настраивается в проекте Godot",
+      "skins": [
+        {
+          "index": 0,
+          "name": "Пистолет «Дуга» — Графитовый контур",
+          "pattern": "шестиугольная насечка",
+          "material": "pistol_duga_skin_graphite_outline",
+          "atlasUvOffset": [
+            0.0,
+            0.0
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.0,
+            0.3333333333333333
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Пистолет «Дуга» — Полярный импульс",
+          "pattern": "диагональный шеврон",
+          "material": "pistol_duga_skin_polar_pulse",
+          "atlasUvOffset": [
+            0.0,
+            0.3333333333333333
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.3333333333333333,
+            0.6666666666666666
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Пистолет «Дуга» — Пыльный код",
+          "pattern": "ломаная сервисная линия",
+          "material": "pistol_duga_skin_dust_code",
+          "atlasUvOffset": [
+            0.0,
+            0.6666666666666666
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.6666666666666666,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "smg_potok",
+      "name": "SMG «Поток»",
+      "lods": [
+        {
+          "triangles": 4108,
+          "budget": 5000,
+          "bytes": 755824,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 14,
+            "maxRayDistanceMeters": 0.06720000000000001,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.18217061537164495,
+            "vertexMin": 0.38,
+            "vertexMean": 0.49294578153041985,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 14,
+          "components": [
+            "barrel",
+            "charging_handle",
+            "grip",
+            "handguard",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "safety_lever",
+            "side_rail",
+            "stock",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 928,
+          "budget": 1200,
+          "bytes": 477584,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 15,
+            "maxRayDistanceMeters": 0.06720000000000001,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.19658032873351322,
+            "vertexMin": 0.38,
+            "vertexMean": 0.5018798038147781,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 15,
+          "components": [
+            "barrel",
+            "charging_handle",
+            "grip",
+            "handguard",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "safety_lever",
+            "side_rail",
+            "stock",
+            "top_rail",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 136,
+          "budget": 300,
+          "bytes": 398592,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 10,
+            "maxRayDistanceMeters": 0.06720000000000001,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.4135101247917522,
+            "vertexMin": 0.38,
+            "vertexMean": 0.6363762773708864,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 10,
+          "components": [
+            "barrel",
+            "grip",
+            "handguard",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "stock",
+            "trigger"
+          ]
+        }
+      ],
+      "meshObjects": 14,
+      "lodDistancesMeters": [
+        0,
+        12,
+        30
+      ],
+      "lodSwitching": "настраивается в проекте Godot",
+      "skins": [
+        {
+          "index": 0,
+          "name": "SMG «Поток» — Графитовый контур",
+          "pattern": "шестиугольная насечка",
+          "material": "smg_potok_skin_graphite_outline",
+          "atlasUvOffset": [
+            0.0,
+            0.0
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.0,
+            0.3333333333333333
+          ]
+        },
+        {
+          "index": 1,
+          "name": "SMG «Поток» — Полярный импульс",
+          "pattern": "диагональный шеврон",
+          "material": "smg_potok_skin_polar_pulse",
+          "atlasUvOffset": [
+            0.0,
+            0.3333333333333333
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.3333333333333333,
+            0.6666666666666666
+          ]
+        },
+        {
+          "index": 2,
+          "name": "SMG «Поток» — Пыльный код",
+          "pattern": "ломаная сервисная линия",
+          "material": "smg_potok_skin_dust_code",
+          "atlasUvOffset": [
+            0.0,
+            0.6666666666666666
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.6666666666666666,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "smg_uzel",
+      "name": "SMG «Узел»",
+      "lods": [
+        {
+          "triangles": 4156,
+          "budget": 5000,
+          "bytes": 760544,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 14,
+            "maxRayDistanceMeters": 0.0588,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.23869229210110593,
+            "vertexMin": 0.38,
+            "vertexMean": 0.5279892211026856,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 14,
+          "components": [
+            "barrel",
+            "charging_handle",
+            "grip",
+            "handguard",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "safety_lever",
+            "side_rail",
+            "stock",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 928,
+          "budget": 1200,
+          "bytes": 477588,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 15,
+            "maxRayDistanceMeters": 0.0588,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.19466146908847518,
+            "vertexMin": 0.38,
+            "vertexMean": 0.5006901108348546,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 15,
+          "components": [
+            "barrel",
+            "charging_handle",
+            "grip",
+            "handguard",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "safety_lever",
+            "side_rail",
+            "stock",
+            "top_rail",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 136,
+          "budget": 300,
+          "bytes": 398592,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 10,
+            "maxRayDistanceMeters": 0.0588,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.40972224656831135,
+            "vertexMin": 0.38,
+            "vertexMean": 0.6340277928723531,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 10,
+          "components": [
+            "barrel",
+            "grip",
+            "handguard",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "stock",
+            "trigger"
+          ]
+        }
+      ],
+      "meshObjects": 14,
+      "lodDistancesMeters": [
+        0,
+        12,
+        30
+      ],
+      "lodSwitching": "настраивается в проекте Godot",
+      "skins": [
+        {
+          "index": 0,
+          "name": "SMG «Узел» — Графитовый контур",
+          "pattern": "шестиугольная насечка",
+          "material": "smg_uzel_skin_graphite_outline",
+          "atlasUvOffset": [
+            0.0,
+            0.0
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.0,
+            0.3333333333333333
+          ]
+        },
+        {
+          "index": 1,
+          "name": "SMG «Узел» — Полярный импульс",
+          "pattern": "диагональный шеврон",
+          "material": "smg_uzel_skin_polar_pulse",
+          "atlasUvOffset": [
+            0.0,
+            0.3333333333333333
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.3333333333333333,
+            0.6666666666666666
+          ]
+        },
+        {
+          "index": 2,
+          "name": "SMG «Узел» — Пыльный код",
+          "pattern": "ломаная сервисная линия",
+          "material": "smg_uzel_skin_dust_code",
+          "atlasUvOffset": [
+            0.0,
+            0.6666666666666666
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.6666666666666666,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rifle_gran",
+      "name": "Винтовка «Грань»",
+      "lods": [
+        {
+          "triangles": 4108,
+          "budget": 5000,
+          "bytes": 767172,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 14,
+            "maxRayDistanceMeters": 0.08,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.23726321144093726,
+            "vertexMin": 0.38,
+            "vertexMean": 0.5271031910933811,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 14,
+          "components": [
+            "barrel",
+            "charging_handle",
+            "grip",
+            "handguard",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "safety_lever",
+            "side_rail",
+            "stock",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 928,
+          "budget": 1200,
+          "bytes": 489464,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 15,
+            "maxRayDistanceMeters": 0.08,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.2025310781441237,
+            "vertexMin": 0.38,
+            "vertexMean": 0.5055692684493567,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 15,
+          "components": [
+            "barrel",
+            "charging_handle",
+            "grip",
+            "handguard",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "safety_lever",
+            "side_rail",
+            "stock",
+            "top_rail",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 136,
+          "budget": 300,
+          "bytes": 410472,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 10,
+            "maxRayDistanceMeters": 0.08,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.4125631529499184,
+            "vertexMin": 0.38,
+            "vertexMean": 0.6357891548289495,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 10,
+          "components": [
+            "barrel",
+            "grip",
+            "handguard",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "stock",
+            "trigger"
+          ]
+        }
+      ],
+      "meshObjects": 14,
+      "lodDistancesMeters": [
+        0,
+        12,
+        30
+      ],
+      "lodSwitching": "настраивается в проекте Godot",
+      "skins": [
+        {
+          "index": 0,
+          "name": "Винтовка «Грань» — Графитовый контур",
+          "pattern": "шестиугольная насечка",
+          "material": "rifle_gran_skin_graphite_outline",
+          "atlasUvOffset": [
+            0.0,
+            0.0
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.0,
+            0.3333333333333333
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Винтовка «Грань» — Полярный импульс",
+          "pattern": "диагональный шеврон",
+          "material": "rifle_gran_skin_polar_pulse",
+          "atlasUvOffset": [
+            0.0,
+            0.3333333333333333
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.3333333333333333,
+            0.6666666666666666
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Винтовка «Грань» — Пыльный код",
+          "pattern": "ломаная сервисная линия",
+          "material": "rifle_gran_skin_dust_code",
+          "atlasUvOffset": [
+            0.0,
+            0.6666666666666666
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.6666666666666666,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rifle_vector",
+      "name": "Винтовка «Вектор-Р»",
+      "lods": [
+        {
+          "triangles": 4156,
+          "budget": 5000,
+          "bytes": 772572,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 14,
+            "maxRayDistanceMeters": 0.08,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.24091861596969744,
+            "vertexMin": 0.38,
+            "vertexMean": 0.5293695419012124,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 14,
+          "components": [
+            "barrel",
+            "charging_handle",
+            "grip",
+            "handguard",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "safety_lever",
+            "side_rail",
+            "stock",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 928,
+          "budget": 1200,
+          "bytes": 489480,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 15,
+            "maxRayDistanceMeters": 0.08,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.20054368767887354,
+            "vertexMin": 0.38,
+            "vertexMean": 0.5043370863609016,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 15,
+          "components": [
+            "barrel",
+            "charging_handle",
+            "grip",
+            "handguard",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "safety_lever",
+            "side_rail",
+            "stock",
+            "top_rail",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 136,
+          "budget": 300,
+          "bytes": 410488,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 10,
+            "maxRayDistanceMeters": 0.08,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.41193183816292067,
+            "vertexMin": 0.38,
+            "vertexMean": 0.6353977396610108,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 10,
+          "components": [
+            "barrel",
+            "grip",
+            "handguard",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "stock",
+            "trigger"
+          ]
+        }
+      ],
+      "meshObjects": 14,
+      "lodDistancesMeters": [
+        0,
+        12,
+        30
+      ],
+      "lodSwitching": "настраивается в проекте Godot",
+      "skins": [
+        {
+          "index": 0,
+          "name": "Винтовка «Вектор-Р» — Графитовый контур",
+          "pattern": "шестиугольная насечка",
+          "material": "rifle_vector_skin_graphite_outline",
+          "atlasUvOffset": [
+            0.0,
+            0.0
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.0,
+            0.3333333333333333
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Винтовка «Вектор-Р» — Полярный импульс",
+          "pattern": "диагональный шеврон",
+          "material": "rifle_vector_skin_polar_pulse",
+          "atlasUvOffset": [
+            0.0,
+            0.3333333333333333
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.3333333333333333,
+            0.6666666666666666
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Винтовка «Вектор-Р» — Пыльный код",
+          "pattern": "ломаная сервисная линия",
+          "material": "rifle_vector_skin_dust_code",
+          "atlasUvOffset": [
+            0.0,
+            0.6666666666666666
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.6666666666666666,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sniper_horda",
+      "name": "Снайперка «Хорда»",
+      "lods": [
+        {
+          "triangles": 5356,
+          "budget": 6000,
+          "bytes": 882488,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 15,
+            "maxRayDistanceMeters": 0.08,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.20932266184343742,
+            "vertexMin": 0.38,
+            "vertexMean": 0.5097800503429313,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 15,
+          "components": [
+            "barrel",
+            "bipod",
+            "charging_handle",
+            "grip",
+            "handguard",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "safety_lever",
+            "side_rail",
+            "stock",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 1192,
+          "budget": 1200,
+          "bytes": 519780,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 16,
+            "maxRayDistanceMeters": 0.08,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.22031989866035415,
+            "vertexMin": 0.38,
+            "vertexMean": 0.5165983371694196,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 16,
+          "components": [
+            "barrel",
+            "bipod",
+            "charging_handle",
+            "grip",
+            "handguard",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "safety_lever",
+            "side_rail",
+            "stock",
+            "top_rail",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 180,
+          "budget": 300,
+          "bytes": 417588,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 10,
+            "maxRayDistanceMeters": 0.08,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.3905651553951461,
+            "vertexMin": 0.38,
+            "vertexMean": 0.6221503963449906,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 10,
+          "components": [
+            "barrel",
+            "grip",
+            "handguard",
+            "magazine",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "receiver",
+            "stock",
+            "trigger"
+          ]
+        }
+      ],
+      "meshObjects": 15,
+      "lodDistancesMeters": [
+        0,
+        12,
+        30
+      ],
+      "lodSwitching": "настраивается в проекте Godot",
+      "skins": [
+        {
+          "index": 0,
+          "name": "Снайперка «Хорда» — Графитовый контур",
+          "pattern": "шестиугольная насечка",
+          "material": "sniper_horda_skin_graphite_outline",
+          "atlasUvOffset": [
+            0.0,
+            0.0
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.0,
+            0.3333333333333333
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Снайперка «Хорда» — Полярный импульс",
+          "pattern": "диагональный шеврон",
+          "material": "sniper_horda_skin_polar_pulse",
+          "atlasUvOffset": [
+            0.0,
+            0.3333333333333333
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.3333333333333333,
+            0.6666666666666666
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Снайперка «Хорда» — Пыльный код",
+          "pattern": "ломаная сервисная линия",
+          "material": "sniper_horda_skin_dust_code",
+          "atlasUvOffset": [
+            0.0,
+            0.6666666666666666
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.6666666666666666,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shotgun_shov",
+      "name": "Дробовик «Шов»",
+      "lods": [
+        {
+          "triangles": 4380,
+          "budget": 5000,
+          "bytes": 797120,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 16,
+            "maxRayDistanceMeters": 0.08,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.22315198394729993,
+            "vertexMin": 0.38,
+            "vertexMean": 0.518354230047326,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 16,
+          "components": [
+            "barrel",
+            "charging_handle",
+            "grip",
+            "handguard",
+            "magazine",
+            "magazine_tube",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "pump",
+            "receiver",
+            "safety_lever",
+            "side_rail",
+            "stock",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 1036,
+          "budget": 1200,
+          "bytes": 503192,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 17,
+            "maxRayDistanceMeters": 0.08,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.18720385022461414,
+            "vertexMin": 0.38,
+            "vertexMean": 0.49606638713926077,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 17,
+          "components": [
+            "barrel",
+            "charging_handle",
+            "grip",
+            "handguard",
+            "magazine",
+            "magazine_tube",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "pump",
+            "receiver",
+            "safety_lever",
+            "side_rail",
+            "stock",
+            "top_rail",
+            "trigger",
+            "trigger_guard"
+          ]
+        },
+        {
+          "triangles": 168,
+          "budget": 300,
+          "bytes": 416276,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 12,
+            "maxRayDistanceMeters": 0.08,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.37422841594175055,
+            "vertexMin": 0.38,
+            "vertexMean": 0.6120216178838853,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 12,
+          "components": [
+            "barrel",
+            "grip",
+            "handguard",
+            "magazine",
+            "magazine_tube",
+            "muzzle_brake",
+            "optic_mount",
+            "optic_sight",
+            "pump",
+            "receiver",
+            "stock",
+            "trigger"
+          ]
+        }
+      ],
+      "meshObjects": 16,
+      "lodDistancesMeters": [
+        0,
+        12,
+        30
+      ],
+      "lodSwitching": "настраивается в проекте Godot",
+      "skins": [
+        {
+          "index": 0,
+          "name": "Дробовик «Шов» — Графитовый контур",
+          "pattern": "шестиугольная насечка",
+          "material": "shotgun_shov_skin_graphite_outline",
+          "atlasUvOffset": [
+            0.0,
+            0.0
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.0,
+            0.3333333333333333
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Дробовик «Шов» — Полярный импульс",
+          "pattern": "диагональный шеврон",
+          "material": "shotgun_shov_skin_polar_pulse",
+          "atlasUvOffset": [
+            0.0,
+            0.3333333333333333
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.3333333333333333,
+            0.6666666666666666
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Дробовик «Шов» — Пыльный код",
+          "pattern": "ломаная сервисная линия",
+          "material": "shotgun_shov_skin_dust_code",
+          "atlasUvOffset": [
+            0.0,
+            0.6666666666666666
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.6666666666666666,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grenade_frag",
+      "name": "Осколочная «Сота»",
+      "lods": [
+        {
+          "triangles": 1392,
+          "budget": 1500,
+          "bytes": 523440,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 6,
+            "maxRayDistanceMeters": 0.025,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.19412797402280071,
+            "vertexMin": 0.38,
+            "vertexMean": 0.5003593438941364,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 6,
+          "components": [
+            "body",
+            "cap",
+            "collar",
+            "pull_ring",
+            "retaining_pin",
+            "safety_lever"
+          ]
+        },
+        {
+          "triangles": 632,
+          "budget": 1200,
+          "bytes": 455720,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 6,
+            "maxRayDistanceMeters": 0.025,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.20972223215632968,
+            "vertexMin": 0.38,
+            "vertexMean": 0.5100277839369244,
+            "vertexMax": 0.9870833456516266
+          },
+          "meshObjects": 6,
+          "components": [
+            "body",
+            "cap",
+            "collar",
+            "pull_ring",
+            "retaining_pin",
+            "safety_lever"
+          ]
+        },
+        {
+          "triangles": 256,
+          "budget": 300,
+          "bytes": 421340,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 6,
+            "maxRayDistanceMeters": 0.025,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.026427471389373142,
+            "vertexMin": 0.38,
+            "vertexMean": 0.39638503226141136,
+            "vertexMax": 0.982777806520462
+          },
+          "meshObjects": 6,
+          "components": [
+            "body",
+            "cap",
+            "collar",
+            "pull_ring",
+            "retaining_pin",
+            "safety_lever"
+          ]
+        }
+      ],
+      "meshObjects": 6,
+      "lodDistancesMeters": [
+        0,
+        12,
+        30
+      ],
+      "lodSwitching": "настраивается в проекте Godot",
+      "skins": [
+        {
+          "index": 0,
+          "name": "Осколочная «Сота» — Графитовый контур",
+          "pattern": "шестиугольная насечка",
+          "material": "grenade_frag_skin_graphite_outline",
+          "atlasUvOffset": [
+            0.0,
+            0.0
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.0,
+            0.3333333333333333
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Осколочная «Сота» — Полярный импульс",
+          "pattern": "диагональный шеврон",
+          "material": "grenade_frag_skin_polar_pulse",
+          "atlasUvOffset": [
+            0.0,
+            0.3333333333333333
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.3333333333333333,
+            0.6666666666666666
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Осколочная «Сота» — Пыльный код",
+          "pattern": "ломаная сервисная линия",
+          "material": "grenade_frag_skin_dust_code",
+          "atlasUvOffset": [
+            0.0,
+            0.6666666666666666
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.6666666666666666,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grenade_flash",
+      "name": "Световая «Луч»",
+      "lods": [
+        {
+          "triangles": 1272,
+          "budget": 1500,
+          "bytes": 516388,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 6,
+            "maxRayDistanceMeters": 0.025,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.13369089484746968,
+            "vertexMin": 0.38,
+            "vertexMean": 0.4628883548054312,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 6,
+          "components": [
+            "body",
+            "cap",
+            "collar",
+            "pull_ring",
+            "retaining_pin",
+            "safety_lever"
+          ]
+        },
+        {
+          "triangles": 552,
+          "budget": 1200,
+          "bytes": 451012,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 6,
+            "maxRayDistanceMeters": 0.025,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.14752252883202321,
+            "vertexMin": 0.38,
+            "vertexMean": 0.47146396787585443,
+            "vertexMax": 0.9870833456516266
+          },
+          "meshObjects": 6,
+          "components": [
+            "body",
+            "cap",
+            "collar",
+            "pull_ring",
+            "retaining_pin",
+            "safety_lever"
+          ]
+        },
+        {
+          "triangles": 232,
+          "budget": 300,
+          "bytes": 421496,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 6,
+            "maxRayDistanceMeters": 0.025,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.0260416679084301,
+            "vertexMin": 0.38,
+            "vertexMean": 0.3961458341032267,
+            "vertexMax": 0.9138889217376709
+          },
+          "meshObjects": 6,
+          "components": [
+            "body",
+            "cap",
+            "collar",
+            "pull_ring",
+            "retaining_pin",
+            "safety_lever"
+          ]
+        }
+      ],
+      "meshObjects": 6,
+      "lodDistancesMeters": [
+        0,
+        12,
+        30
+      ],
+      "lodSwitching": "настраивается в проекте Godot",
+      "skins": [
+        {
+          "index": 0,
+          "name": "Световая «Луч» — Графитовый контур",
+          "pattern": "шестиугольная насечка",
+          "material": "grenade_flash_skin_graphite_outline",
+          "atlasUvOffset": [
+            0.0,
+            0.0
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.0,
+            0.3333333333333333
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Световая «Луч» — Полярный импульс",
+          "pattern": "диагональный шеврон",
+          "material": "grenade_flash_skin_polar_pulse",
+          "atlasUvOffset": [
+            0.0,
+            0.3333333333333333
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.3333333333333333,
+            0.6666666666666666
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Световая «Луч» — Пыльный код",
+          "pattern": "ломаная сервисная линия",
+          "material": "grenade_flash_skin_dust_code",
+          "atlasUvOffset": [
+            0.0,
+            0.6666666666666666
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.6666666666666666,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grenade_smoke",
+      "name": "Дымовая «Туман»",
+      "lods": [
+        {
+          "triangles": 1440,
+          "budget": 1500,
+          "bytes": 528348,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 6,
+            "maxRayDistanceMeters": 0.025,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.11022478475382454,
+            "vertexMin": 0.38,
+            "vertexMean": 0.4483393665473712,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 6,
+          "components": [
+            "body",
+            "cap",
+            "collar",
+            "pull_ring",
+            "retaining_pin",
+            "safety_lever"
+          ]
+        },
+        {
+          "triangles": 568,
+          "budget": 1200,
+          "bytes": 448676,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 6,
+            "maxRayDistanceMeters": 0.025,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.11179148264833398,
+            "vertexMin": 0.38,
+            "vertexMean": 0.4493107192419671,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 6,
+          "components": [
+            "body",
+            "cap",
+            "collar",
+            "pull_ring",
+            "retaining_pin",
+            "safety_lever"
+          ]
+        },
+        {
+          "triangles": 280,
+          "budget": 300,
+          "bytes": 422568,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 6,
+            "maxRayDistanceMeters": 0.025,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.059850149248775686,
+            "vertexMin": 0.38,
+            "vertexMean": 0.41710709253424094,
+            "vertexMax": 0.9741666913032532
+          },
+          "meshObjects": 6,
+          "components": [
+            "body",
+            "cap",
+            "collar",
+            "pull_ring",
+            "retaining_pin",
+            "safety_lever"
+          ]
+        }
+      ],
+      "meshObjects": 6,
+      "lodDistancesMeters": [
+        0,
+        12,
+        30
+      ],
+      "lodSwitching": "настраивается в проекте Godot",
+      "skins": [
+        {
+          "index": 0,
+          "name": "Дымовая «Туман» — Графитовый контур",
+          "pattern": "шестиугольная насечка",
+          "material": "grenade_smoke_skin_graphite_outline",
+          "atlasUvOffset": [
+            0.0,
+            0.0
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.0,
+            0.3333333333333333
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Дымовая «Туман» — Полярный импульс",
+          "pattern": "диагональный шеврон",
+          "material": "grenade_smoke_skin_polar_pulse",
+          "atlasUvOffset": [
+            0.0,
+            0.3333333333333333
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.3333333333333333,
+            0.6666666666666666
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Дымовая «Туман» — Пыльный код",
+          "pattern": "ломаная сервисная линия",
+          "material": "grenade_smoke_skin_dust_code",
+          "atlasUvOffset": [
+            0.0,
+            0.6666666666666666
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.6666666666666666,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grenade_molotov",
+      "name": "Зажигательная «Жар»",
+      "lods": [
+        {
+          "triangles": 1352,
+          "budget": 1500,
+          "bytes": 513872,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 7,
+            "maxRayDistanceMeters": 0.0276,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.19307331867854705,
+            "vertexMin": 0.38,
+            "vertexMean": 0.4997054575806992,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 7,
+          "components": [
+            "body",
+            "cap",
+            "collar",
+            "neck",
+            "pull_ring",
+            "retaining_pin",
+            "safety_lever"
+          ]
+        },
+        {
+          "triangles": 496,
+          "budget": 1200,
+          "bytes": 438880,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 7,
+            "maxRayDistanceMeters": 0.0276,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.1823179782791571,
+            "vertexMin": 0.38,
+            "vertexMean": 0.4930371465330774,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 7,
+          "components": [
+            "body",
+            "cap",
+            "collar",
+            "neck",
+            "pull_ring",
+            "retaining_pin",
+            "safety_lever"
+          ]
+        },
+        {
+          "triangles": 252,
+          "budget": 300,
+          "bytes": 416684,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 7,
+            "maxRayDistanceMeters": 0.0276,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.05059524178504944,
+            "vertexMin": 0.38,
+            "vertexMean": 0.4113690499067307,
+            "vertexMax": 0.982777806520462
+          },
+          "meshObjects": 7,
+          "components": [
+            "body",
+            "cap",
+            "collar",
+            "neck",
+            "pull_ring",
+            "retaining_pin",
+            "safety_lever"
+          ]
+        }
+      ],
+      "meshObjects": 7,
+      "lodDistancesMeters": [
+        0,
+        12,
+        30
+      ],
+      "lodSwitching": "настраивается в проекте Godot",
+      "skins": [
+        {
+          "index": 0,
+          "name": "Зажигательная «Жар» — Графитовый контур",
+          "pattern": "шестиугольная насечка",
+          "material": "grenade_molotov_skin_graphite_outline",
+          "atlasUvOffset": [
+            0.0,
+            0.0
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.0,
+            0.3333333333333333
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Зажигательная «Жар» — Полярный импульс",
+          "pattern": "диагональный шеврон",
+          "material": "grenade_molotov_skin_polar_pulse",
+          "atlasUvOffset": [
+            0.0,
+            0.3333333333333333
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.3333333333333333,
+            0.6666666666666666
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Зажигательная «Жар» — Пыльный код",
+          "pattern": "ломаная сервисная линия",
+          "material": "grenade_molotov_skin_dust_code",
+          "atlasUvOffset": [
+            0.0,
+            0.6666666666666666
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.6666666666666666,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "knife_kasat",
+      "name": "Нож «Касат»",
+      "lods": [
+        {
+          "triangles": 1608,
+          "budget": 2500,
+          "bytes": 527420,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 4,
+            "maxRayDistanceMeters": 0.0372,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.15544395707917238,
+            "vertexMin": 0.38,
+            "vertexMean": 0.4763752533890869,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 4,
+          "components": [
+            "blade",
+            "guard",
+            "handle",
+            "pommel"
+          ]
+        },
+        {
+          "triangles": 1164,
+          "budget": 1200,
+          "bytes": 489032,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 4,
+            "maxRayDistanceMeters": 0.0372,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.23487303936329668,
+            "vertexMin": 0.38,
+            "vertexMean": 0.525621284405244,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 4,
+          "components": [
+            "blade",
+            "guard",
+            "handle",
+            "pommel"
+          ]
+        },
+        {
+          "triangles": 64,
+          "budget": 300,
+          "bytes": 392968,
+          "clips": [
+            "fire",
+            "idle",
+            "inspect",
+            "reload"
+          ],
+          "sockets": [
+            "socket_muzzle",
+            "socket_eject",
+            "socket_hand_r",
+            "socket_hand_l"
+          ],
+          "aoBake": {
+            "baked": true,
+            "target": "VERTEX_COLORS",
+            "type": "AO",
+            "objects": 4,
+            "maxRayDistanceMeters": 0.0372,
+            "contrastRemap": "0.38 + 0.62 * rawAO",
+            "sourceVertexMin": 0.0,
+            "sourceVertexMean": 0.6583333551883698,
+            "vertexMin": 0.38,
+            "vertexMean": 0.7881666802167893,
+            "vertexMax": 1.0
+          },
+          "meshObjects": 4,
+          "components": [
+            "blade",
+            "guard",
+            "handle",
+            "pommel"
+          ]
+        }
+      ],
+      "meshObjects": 4,
+      "lodDistancesMeters": [
+        0,
+        12,
+        30
+      ],
+      "lodSwitching": "настраивается в проекте Godot",
+      "skins": [
+        {
+          "index": 0,
+          "name": "Нож «Касат» — Графитовый контур",
+          "pattern": "шестиугольная насечка",
+          "material": "knife_kasat_skin_graphite_outline",
+          "atlasUvOffset": [
+            0.0,
+            0.0
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.0,
+            0.3333333333333333
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Нож «Касат» — Полярный импульс",
+          "pattern": "диагональный шеврон",
+          "material": "knife_kasat_skin_polar_pulse",
+          "atlasUvOffset": [
+            0.0,
+            0.3333333333333333
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.3333333333333333,
+            0.6666666666666666
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Нож «Касат» — Пыльный код",
+          "pattern": "ломаная сервисная линия",
+          "material": "knife_kasat_skin_dust_code",
+          "atlasUvOffset": [
+            0.0,
+            0.6666666666666666
+          ],
+          "atlasUvScale": [
+            1.0,
+            1.0
+          ],
+          "atlasRow": [
+            0.6666666666666666,
+            1.0
+          ]
+        }
+      ]
+    }
+  ],
+  "atlasSize": 1024,
+  "aoBakeTarget": "VERTEX_COLORS",
+  "skinsFile": "skins.json"
+}

@@ -1,0 +1,11 @@
+﻿*.blend
+*.blend1
+*.glb
+*.png
+*.jpg
+*.jpeg
+generated/
+.godot/
+bin/
+obj/
+__pycache__/

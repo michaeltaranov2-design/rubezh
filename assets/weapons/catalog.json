@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "units": "meters",
+  "blenderVersion": "5.2.x",
+  "atlasSize": 1024,
+  "clips": ["idle", "fire", "reload", "inspect"],
+  "sockets": ["socket_muzzle", "socket_eject", "socket_hand_r", "socket_hand_l"],
+  "socketSemantics": {
+    "socket_muzzle": "дульное устройство или передняя ось предмета",
+    "socket_eject": "направление выброса; сохраняется для совместимости",
+    "socket_hand_r": "опорная правая рука",
+    "socket_hand_l": "опорная левая рука",
+    "optic": "прицел представлен отдельными объектами optic_sight/optic_mount; отдельный socket_sight намеренно не добавлен"
+  },
+  "skinPalettes": [
+    {"id": "graphite_outline", "name": "Графитовый контур", "pattern": "шестиугольная насечка", "uvOffset": [0.0, 0.0]},
+    {"id": "polar_pulse", "name": "Полярный импульс", "pattern": "диагональный шеврон", "uvOffset": [0.0, 0.3333333333]},
+    {"id": "dust_code", "name": "Пыльный код", "pattern": "ломаная сервисная линия", "uvOffset": [0.0, 0.6666666667]}
+  ],
+  "lodRanges": {"LOD1": [300, 1200], "LOD2": [1, 300]},
+  "assets": [
+    {"id":"pistol_klyn","name":"Пистолет «Клин»","kind":"pistol","length":0.28,"width":0.078,"variant":0,"accent":0,"triangleBudgets":[2500,1200,300],"triangleRanges":[[1500,2500],[300,1200],[1,300]]},
+    {"id":"pistol_duga","name":"Пистолет «Дуга»","kind":"pistol","length":0.32,"width":0.086,"variant":1,"accent":1,"triangleBudgets":[2500,1200,300],"triangleRanges":[[1500,2500],[300,1200],[1,300]]},
+    {"id":"smg_potok","name":"SMG «Поток»","kind":"smg","length":0.56,"width":0.086,"variant":0,"accent":2,"triangleBudgets":[5000,1200,300],"triangleRanges":[[3000,5000],[300,1200],[1,300]]},
+    {"id":"smg_uzel","name":"SMG «Узел»","kind":"smg","length":0.49,"width":0.1,"variant":1,"accent":3,"triangleBudgets":[5000,1200,300],"triangleRanges":[[3000,5000],[300,1200],[1,300]]},
+    {"id":"rifle_gran","name":"Винтовка «Грань»","kind":"rifle","length":0.86,"width":0.092,"variant":0,"accent":0,"triangleBudgets":[5000,1200,300],"triangleRanges":[[3000,5000],[300,1200],[1,300]]},
+    {"id":"rifle_vector","name":"Винтовка «Вектор-Р»","kind":"rifle","length":0.78,"width":0.1,"variant":1,"accent":1,"triangleBudgets":[5000,1200,300],"triangleRanges":[[3000,5000],[300,1200],[1,300]]},
+    {"id":"sniper_horda","name":"Снайперка «Хорда»","kind":"sniper","length":1.12,"width":0.096,"variant":0,"accent":2,"triangleBudgets":[6000,1200,300],"triangleRanges":[[4000,6000],[300,1200],[1,300]]},
+    {"id":"shotgun_shov","name":"Дробовик «Шов»","kind":"shotgun","length":0.92,"width":0.102,"variant":1,"accent":3,"triangleBudgets":[5000,1200,300],"triangleRanges":[[3000,5000],[300,1200],[1,300]]},
+    {"id":"grenade_frag","name":"Осколочная «Сота»","kind":"frag","length":0.14,"width":0.082,"variant":0,"accent":0,"triangleBudgets":[1500,1200,300],"triangleRanges":[[800,1500],[300,1200],[1,300]]},
+    {"id":"grenade_flash","name":"Световая «Луч»","kind":"flash","length":0.17,"width":0.065,"variant":1,"accent":1,"triangleBudgets":[1500,1200,300],"triangleRanges":[[800,1500],[300,1200],[1,300]]},
+    {"id":"grenade_smoke","name":"Дымовая «Туман»","kind":"smoke","length":0.18,"width":0.085,"variant":0,"accent":2,"triangleBudgets":[1500,1200,300],"triangleRanges":[[800,1500],[300,1200],[1,300]]},
+    {"id":"grenade_molotov","name":"Зажигательная «Жар»","kind":"molotov","length":0.23,"width":0.078,"variant":1,"accent":3,"triangleBudgets":[1500,1200,300],"triangleRanges":[[800,1500],[300,1200],[1,300]]},
+    {"id":"knife_kasat","name":"Нож «Касат»","kind":"knife","length":0.31,"width":0.052,"variant":0,"accent":0,"triangleBudgets":[2500,1200,300],"triangleRanges":[[1500,2500],[300,1200],[1,300]]}
+  ]
+}

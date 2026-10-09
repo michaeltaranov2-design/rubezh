@@ -1,0 +1,730 @@
+[
+  {
+    "id": "pistol_klyn",
+    "lods": [
+      {
+        "triangles": 2336,
+        "budget": 2500,
+        "bytes": 605564,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 696,
+        "budget": 1200,
+        "bytes": 460708,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 124,
+        "budget": 300,
+        "bytes": 405332,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pistol_duga",
+    "lods": [
+      {
+        "triangles": 2484,
+        "budget": 2500,
+        "bytes": 617812,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 696,
+        "budget": 1200,
+        "bytes": 460708,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 124,
+        "budget": 300,
+        "bytes": 405320,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "smg_potok",
+    "lods": [
+      {
+        "triangles": 4108,
+        "budget": 5000,
+        "bytes": 755824,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 928,
+        "budget": 1200,
+        "bytes": 477584,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 136,
+        "budget": 300,
+        "bytes": 398592,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "smg_uzel",
+    "lods": [
+      {
+        "triangles": 4156,
+        "budget": 5000,
+        "bytes": 760544,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 928,
+        "budget": 1200,
+        "bytes": 477588,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 136,
+        "budget": 300,
+        "bytes": 398592,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rifle_gran",
+    "lods": [
+      {
+        "triangles": 4108,
+        "budget": 5000,
+        "bytes": 767172,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 928,
+        "budget": 1200,
+        "bytes": 489464,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 136,
+        "budget": 300,
+        "bytes": 410472,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rifle_vector",
+    "lods": [
+      {
+        "triangles": 4156,
+        "budget": 5000,
+        "bytes": 772572,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 928,
+        "budget": 1200,
+        "bytes": 489480,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 136,
+        "budget": 300,
+        "bytes": 410488,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sniper_horda",
+    "lods": [
+      {
+        "triangles": 5356,
+        "budget": 6000,
+        "bytes": 882488,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 1192,
+        "budget": 1200,
+        "bytes": 519780,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 180,
+        "budget": 300,
+        "bytes": 417588,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shotgun_shov",
+    "lods": [
+      {
+        "triangles": 4380,
+        "budget": 5000,
+        "bytes": 797120,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 1036,
+        "budget": 1200,
+        "bytes": 503192,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 168,
+        "budget": 300,
+        "bytes": 416276,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grenade_frag",
+    "lods": [
+      {
+        "triangles": 1392,
+        "budget": 1500,
+        "bytes": 523440,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 632,
+        "budget": 1200,
+        "bytes": 455720,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 256,
+        "budget": 300,
+        "bytes": 421340,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grenade_flash",
+    "lods": [
+      {
+        "triangles": 1272,
+        "budget": 1500,
+        "bytes": 516388,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 552,
+        "budget": 1200,
+        "bytes": 451012,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 232,
+        "budget": 300,
+        "bytes": 421496,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grenade_smoke",
+    "lods": [
+      {
+        "triangles": 1440,
+        "budget": 1500,
+        "bytes": 528348,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 568,
+        "budget": 1200,
+        "bytes": 448676,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 280,
+        "budget": 300,
+        "bytes": 422568,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grenade_molotov",
+    "lods": [
+      {
+        "triangles": 1352,
+        "budget": 1500,
+        "bytes": 513872,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 496,
+        "budget": 1200,
+        "bytes": 438880,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 252,
+        "budget": 300,
+        "bytes": 416684,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "knife_kasat",
+    "lods": [
+      {
+        "triangles": 1608,
+        "budget": 2500,
+        "bytes": 527420,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 1164,
+        "budget": 1200,
+        "bytes": 489032,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      },
+      {
+        "triangles": 64,
+        "budget": 300,
+        "bytes": 392968,
+        "clips": [
+          "fire",
+          "idle",
+          "inspect",
+          "reload"
+        ],
+        "sockets": [
+          "socket_muzzle",
+          "socket_eject",
+          "socket_hand_r",
+          "socket_hand_l"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,65 @@
+﻿{
+    "started":  "2026-10-09T11:28:32.635745+00:00",
+    "status":  "exportsValidated",
+    "blenderExecutable":  "C:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+    "steps":  [
+                  "tests",
+                  "api",
+                  "pilot",
+                  "pilot_check",
+                  "generate_all",
+                  "full_check",
+                  "visual_review",
+                  "godot_validation"
+              ],
+    "gameBuildTested":  false,
+    "visualReview":  true,
+    "api":  {
+                "apiCompatible":  true,
+                "version":  [
+                                5,
+                                2,
+                                2
+                            ],
+                "versionString":  "5.2.2 LTS",
+                "background":  true,
+                "exported":  false
+            },
+    "finished":  "2026-10-09T11:30:06.933187+00:00",
+    "finalIteration":  5,
+    "tests":  {
+                  "command":  "python -m unittest discover -s tests -v",
+                  "count":  49,
+                  "status":  "passed"
+              },
+    "visualReviewDetails":  {
+                                "models":  13,
+                                "viewsPerModel":  4,
+                                "resolution":  "512x512",
+                                "renderCount":  52,
+                                "contactSheet":  "review/iteration-5/preview-sheet.png",
+                                "comparison":  "review/comparison.md"
+                            },
+    "godotValidation":  {
+                            "version":  "4.7.2-stable (official)",
+                            "glbCount":  39,
+                            "validatedAssets":  39,
+                            "errors":  0,
+                            "texturedMaterialSurfacesMinimum":  4,
+                            "socketIds":  [
+                                              "socket_muzzle",
+                                              "socket_eject",
+                                              "socket_hand_r",
+                                              "socket_hand_l"
+                                          ],
+                            "clips":  [
+                                          "idle",
+                                          "fire",
+                                          "reload",
+                                          "inspect"
+                                      ],
+                            "mode":  "headless asset import/structure validation"
+                        },
+    "targetGameBuildTested":  false,
+    "targetGameProfiling":  false
+}

@@ -1,0 +1,1684 @@
+{
+  "assets": [
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "grenade_flash_skin_graphite_outline"
+      ],
+      "mesh_instances": 6,
+      "path": "res://assets/weapons/grenade_flash/grenade_flash_LOD0.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 6,
+      "textured_material_surfaces": 6
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "grenade_flash_skin_graphite_outline"
+      ],
+      "mesh_instances": 6,
+      "path": "res://assets/weapons/grenade_flash/grenade_flash_LOD1.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 6,
+      "textured_material_surfaces": 6
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "grenade_flash_skin_graphite_outline"
+      ],
+      "mesh_instances": 6,
+      "path": "res://assets/weapons/grenade_flash/grenade_flash_LOD2.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 6,
+      "textured_material_surfaces": 6
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "grenade_frag_skin_graphite_outline"
+      ],
+      "mesh_instances": 6,
+      "path": "res://assets/weapons/grenade_frag/grenade_frag_LOD0.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 6,
+      "textured_material_surfaces": 6
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "grenade_frag_skin_graphite_outline"
+      ],
+      "mesh_instances": 6,
+      "path": "res://assets/weapons/grenade_frag/grenade_frag_LOD1.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 6,
+      "textured_material_surfaces": 6
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "grenade_frag_skin_graphite_outline"
+      ],
+      "mesh_instances": 6,
+      "path": "res://assets/weapons/grenade_frag/grenade_frag_LOD2.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 6,
+      "textured_material_surfaces": 6
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "grenade_molotov_skin_graphite_outline"
+      ],
+      "mesh_instances": 7,
+      "path": "res://assets/weapons/grenade_molotov/grenade_molotov_LOD0.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 7,
+      "textured_material_surfaces": 7
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "grenade_molotov_skin_graphite_outline"
+      ],
+      "mesh_instances": 7,
+      "path": "res://assets/weapons/grenade_molotov/grenade_molotov_LOD1.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 7,
+      "textured_material_surfaces": 7
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "grenade_molotov_skin_graphite_outline"
+      ],
+      "mesh_instances": 7,
+      "path": "res://assets/weapons/grenade_molotov/grenade_molotov_LOD2.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 7,
+      "textured_material_surfaces": 7
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "grenade_smoke_skin_graphite_outline"
+      ],
+      "mesh_instances": 6,
+      "path": "res://assets/weapons/grenade_smoke/grenade_smoke_LOD0.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 6,
+      "textured_material_surfaces": 6
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "grenade_smoke_skin_graphite_outline"
+      ],
+      "mesh_instances": 6,
+      "path": "res://assets/weapons/grenade_smoke/grenade_smoke_LOD1.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 6,
+      "textured_material_surfaces": 6
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "grenade_smoke_skin_graphite_outline"
+      ],
+      "mesh_instances": 6,
+      "path": "res://assets/weapons/grenade_smoke/grenade_smoke_LOD2.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 6,
+      "textured_material_surfaces": 6
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "knife_kasat_skin_graphite_outline"
+      ],
+      "mesh_instances": 4,
+      "path": "res://assets/weapons/knife_kasat/knife_kasat_LOD0.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 4,
+      "textured_material_surfaces": 4
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "knife_kasat_skin_graphite_outline"
+      ],
+      "mesh_instances": 4,
+      "path": "res://assets/weapons/knife_kasat/knife_kasat_LOD1.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 4,
+      "textured_material_surfaces": 4
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "knife_kasat_skin_graphite_outline"
+      ],
+      "mesh_instances": 4,
+      "path": "res://assets/weapons/knife_kasat/knife_kasat_LOD2.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 4,
+      "textured_material_surfaces": 4
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "pistol_duga_skin_graphite_outline"
+      ],
+      "mesh_instances": 11,
+      "path": "res://assets/weapons/pistol_duga/pistol_duga_LOD0.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 11,
+      "textured_material_surfaces": 11
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "pistol_duga_skin_graphite_outline"
+      ],
+      "mesh_instances": 11,
+      "path": "res://assets/weapons/pistol_duga/pistol_duga_LOD1.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 11,
+      "textured_material_surfaces": 11
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "pistol_duga_skin_graphite_outline"
+      ],
+      "mesh_instances": 9,
+      "path": "res://assets/weapons/pistol_duga/pistol_duga_LOD2.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 9,
+      "textured_material_surfaces": 9
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "pistol_klyn_skin_graphite_outline"
+      ],
+      "mesh_instances": 11,
+      "path": "res://assets/weapons/pistol_klyn/pistol_klyn_LOD0.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 11,
+      "textured_material_surfaces": 11
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "pistol_klyn_skin_graphite_outline"
+      ],
+      "mesh_instances": 11,
+      "path": "res://assets/weapons/pistol_klyn/pistol_klyn_LOD1.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 11,
+      "textured_material_surfaces": 11
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "pistol_klyn_skin_graphite_outline"
+      ],
+      "mesh_instances": 9,
+      "path": "res://assets/weapons/pistol_klyn/pistol_klyn_LOD2.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 9,
+      "textured_material_surfaces": 9
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "rifle_gran_skin_graphite_outline"
+      ],
+      "mesh_instances": 14,
+      "path": "res://assets/weapons/rifle_gran/rifle_gran_LOD0.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 14,
+      "textured_material_surfaces": 14
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "rifle_gran_skin_graphite_outline"
+      ],
+      "mesh_instances": 15,
+      "path": "res://assets/weapons/rifle_gran/rifle_gran_LOD1.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 15,
+      "textured_material_surfaces": 15
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "rifle_gran_skin_graphite_outline"
+      ],
+      "mesh_instances": 10,
+      "path": "res://assets/weapons/rifle_gran/rifle_gran_LOD2.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 10,
+      "textured_material_surfaces": 10
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "rifle_vector_skin_graphite_outline"
+      ],
+      "mesh_instances": 14,
+      "path": "res://assets/weapons/rifle_vector/rifle_vector_LOD0.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 14,
+      "textured_material_surfaces": 14
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "rifle_vector_skin_graphite_outline"
+      ],
+      "mesh_instances": 15,
+      "path": "res://assets/weapons/rifle_vector/rifle_vector_LOD1.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 15,
+      "textured_material_surfaces": 15
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "rifle_vector_skin_graphite_outline"
+      ],
+      "mesh_instances": 10,
+      "path": "res://assets/weapons/rifle_vector/rifle_vector_LOD2.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 10,
+      "textured_material_surfaces": 10
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "shotgun_shov_skin_graphite_outline"
+      ],
+      "mesh_instances": 16,
+      "path": "res://assets/weapons/shotgun_shov/shotgun_shov_LOD0.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 16,
+      "textured_material_surfaces": 16
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "shotgun_shov_skin_graphite_outline"
+      ],
+      "mesh_instances": 17,
+      "path": "res://assets/weapons/shotgun_shov/shotgun_shov_LOD1.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 17,
+      "textured_material_surfaces": 17
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "shotgun_shov_skin_graphite_outline"
+      ],
+      "mesh_instances": 12,
+      "path": "res://assets/weapons/shotgun_shov/shotgun_shov_LOD2.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 12,
+      "textured_material_surfaces": 12
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "smg_potok_skin_graphite_outline"
+      ],
+      "mesh_instances": 14,
+      "path": "res://assets/weapons/smg_potok/smg_potok_LOD0.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 14,
+      "textured_material_surfaces": 14
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "smg_potok_skin_graphite_outline"
+      ],
+      "mesh_instances": 15,
+      "path": "res://assets/weapons/smg_potok/smg_potok_LOD1.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 15,
+      "textured_material_surfaces": 15
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "smg_potok_skin_graphite_outline"
+      ],
+      "mesh_instances": 10,
+      "path": "res://assets/weapons/smg_potok/smg_potok_LOD2.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 10,
+      "textured_material_surfaces": 10
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "smg_uzel_skin_graphite_outline"
+      ],
+      "mesh_instances": 14,
+      "path": "res://assets/weapons/smg_uzel/smg_uzel_LOD0.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 14,
+      "textured_material_surfaces": 14
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "smg_uzel_skin_graphite_outline"
+      ],
+      "mesh_instances": 15,
+      "path": "res://assets/weapons/smg_uzel/smg_uzel_LOD1.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 15,
+      "textured_material_surfaces": 15
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "smg_uzel_skin_graphite_outline"
+      ],
+      "mesh_instances": 10,
+      "path": "res://assets/weapons/smg_uzel/smg_uzel_LOD2.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 10,
+      "textured_material_surfaces": 10
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "sniper_horda_skin_graphite_outline"
+      ],
+      "mesh_instances": 15,
+      "path": "res://assets/weapons/sniper_horda/sniper_horda_LOD0.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 15,
+      "textured_material_surfaces": 15
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "sniper_horda_skin_graphite_outline"
+      ],
+      "mesh_instances": 16,
+      "path": "res://assets/weapons/sniper_horda/sniper_horda_LOD1.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 16,
+      "textured_material_surfaces": 16
+    },
+    {
+      "animations": [
+        "fire",
+        "idle",
+        "inspect",
+        "reload"
+      ],
+      "materials": [
+        "sniper_horda_skin_graphite_outline"
+      ],
+      "mesh_instances": 10,
+      "path": "res://assets/weapons/sniper_horda/sniper_horda_LOD2.glb",
+      "socket_direction_minus_z": {
+        "socket_eject": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "socket_hand_l": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_hand_r": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "socket_muzzle": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "sockets": [
+        "socket_eject",
+        "socket_hand_l",
+        "socket_hand_r",
+        "socket_muzzle"
+      ],
+      "surfaces": 10,
+      "textured_material_surfaces": 10
+    }
+  ],
+  "errors": [],
+  "glb_count": 39,
+  "godot": "4.7.2-stable (official)"
+}
