@@ -1,0 +1,582 @@
+{
+  "schemaVersion": 1,
+  "status": "Оригинальный проектный контракт; обработчик C# и сервер не реализованы",
+  "modules": [
+    {
+      "name": "wallhack",
+      "description": "Подсветка сквозь стены только в нерейтинговых режимах",
+      "aliases": [],
+      "parameters": {
+        "color": {
+          "type": "color",
+          "description": "Цвет RGB",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "default": "#FF8050"
+        },
+        "range": {
+          "type": "float",
+          "description": "Дальность, метры",
+          "min": 1,
+          "max": 100,
+          "default": 40
+        },
+        "enemiesOnly": {
+          "type": "bool",
+          "description": "Только противники",
+          "default": true
+        }
+      },
+      "example": "game give self wallhack range=40",
+      "modes": [
+        "Sandbox",
+        "Community"
+      ],
+      "scope": "player",
+      "capability": "modifier.self",
+      "requiresSvCheats": true,
+      "maxActivationsPerMatch": 3,
+      "durationRounds": 2,
+      "lifetime": "roundLease"
+    },
+    {
+      "name": "aimbot",
+      "description": "Серверная помощь прицеливания",
+      "aliases": [
+        "legit",
+        "легитный_аим"
+      ],
+      "parameters": {
+        "fov": {
+          "type": "float",
+          "description": "Полуугол конуса, градусы",
+          "min": 0.1,
+          "max": 15,
+          "default": 5
+        },
+        "smooth": {
+          "type": "float",
+          "description": "Коэффициент сглаживания",
+          "min": 1,
+          "max": 30,
+          "default": 12
+        },
+        "bone": {
+          "type": "enum",
+          "description": "Целевая кость",
+          "values": [
+            "head",
+            "chest"
+          ],
+          "default": "chest"
+        },
+        "visibleOnly": {
+          "type": "bool",
+          "description": "Проверять видимость",
+          "default": true
+        }
+      },
+      "example": "game give self aimbot fov=5 smooth=12",
+      "modes": [
+        "Competitive",
+        "Sandbox",
+        "Community"
+      ],
+      "scope": "player",
+      "capability": "modifier.self",
+      "requiresSvCheats": true,
+      "maxActivationsPerMatch": 3,
+      "durationRounds": 2,
+      "lifetime": "roundLease",
+      "modeOverrides": {
+        "Competitive": {
+          "visibleOnly": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "name": "triggerbot",
+      "description": "Выстрел при удержании допустимой цели в прицеле",
+      "aliases": [],
+      "parameters": {
+        "delayMs": {
+          "type": "int",
+          "description": "Задержка, миллисекунды",
+          "min": 50,
+          "max": 500,
+          "default": 150
+        },
+        "weapon": {
+          "type": "enum",
+          "description": "Фильтр оружия",
+          "values": [
+            "any",
+            "pistol",
+            "smg",
+            "rifle",
+            "sniper",
+            "shotgun"
+          ],
+          "default": "any"
+        },
+        "visibleOnly": {
+          "type": "bool",
+          "description": "Проверять видимость",
+          "default": true
+        }
+      },
+      "example": "game give self triggerbot delayMs=150",
+      "modes": [
+        "Competitive",
+        "Sandbox",
+        "Community"
+      ],
+      "scope": "player",
+      "capability": "modifier.self",
+      "requiresSvCheats": true,
+      "maxActivationsPerMatch": 3,
+      "durationRounds": 2,
+      "lifetime": "roundLease",
+      "modeOverrides": {
+        "Competitive": {
+          "visibleOnly": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "name": "bhop",
+      "description": "Автопрыжок с серверным ограничением скорости",
+      "aliases": [],
+      "parameters": {
+        "autoJump": {
+          "type": "bool",
+          "description": "Автоматический прыжок",
+          "default": true
+        },
+        "maxSpeed": {
+          "type": "float",
+          "description": "Скорость, метры в секунду",
+          "min": 4,
+          "max": 12,
+          "default": 7
+        }
+      },
+      "example": "game give self bhop maxSpeed=7",
+      "modes": [
+        "Competitive",
+        "Sandbox",
+        "Community"
+      ],
+      "scope": "player",
+      "capability": "modifier.self",
+      "requiresSvCheats": true,
+      "maxActivationsPerMatch": 3,
+      "durationRounds": 2,
+      "lifetime": "roundLease"
+    },
+    {
+      "name": "skinchanger",
+      "description": "Только встроенные оригинальные материалы оружия",
+      "aliases": [],
+      "parameters": {
+        "weapon": {
+          "type": "enum",
+          "description": "Оружие",
+          "values": [
+            "pistol",
+            "smg",
+            "rifle",
+            "sniper",
+            "shotgun"
+          ],
+          "default": "rifle"
+        },
+        "skin": {
+          "type": "enum",
+          "description": "Материал",
+          "values": [
+            "default",
+            "sand",
+            "slate",
+            "copper"
+          ],
+          "default": "sand"
+        },
+        "wear": {
+          "type": "float",
+          "description": "Износ",
+          "min": 0,
+          "max": 1,
+          "default": 0.1
+        }
+      },
+      "example": "game give self skinchanger weapon=rifle skin=sand",
+      "modes": [
+        "Competitive",
+        "Sandbox",
+        "Community"
+      ],
+      "scope": "player",
+      "capability": "modifier.self",
+      "requiresSvCheats": true,
+      "maxActivationsPerMatch": 3,
+      "durationRounds": 2,
+      "lifetime": "roundLease"
+    },
+    {
+      "name": "rage",
+      "description": "Экспериментальные угловые смещения без рассогласования хитбоксов",
+      "aliases": [],
+      "parameters": {
+        "pitchOffset": {
+          "type": "float",
+          "description": "Вертикальное смещение, градусы",
+          "min": -45,
+          "max": 45,
+          "default": 0
+        },
+        "yawOffset": {
+          "type": "float",
+          "description": "Горизонтальное смещение, градусы",
+          "min": -180,
+          "max": 180,
+          "default": 0
+        }
+      },
+      "example": "game give self rage yawOffset=30",
+      "modes": [
+        "Sandbox",
+        "Community"
+      ],
+      "scope": "player",
+      "capability": "modifier.self",
+      "requiresSvCheats": true,
+      "maxActivationsPerMatch": 3,
+      "durationRounds": 2,
+      "lifetime": "roundLease"
+    },
+    {
+      "name": "noclip",
+      "description": "Серверное перемещение без столкновений",
+      "aliases": [],
+      "parameters": {
+        "speed": {
+          "type": "float",
+          "description": "Скорость полёта, метры в секунду",
+          "min": 1,
+          "max": 20,
+          "default": 8
+        }
+      },
+      "example": "game give self noclip speed=8",
+      "modes": [
+        "Sandbox",
+        "Community"
+      ],
+      "scope": "player",
+      "capability": "modifier.self",
+      "requiresSvCheats": true,
+      "maxActivationsPerMatch": 3,
+      "durationRounds": 2,
+      "lifetime": "roundLease"
+    },
+    {
+      "name": "impacts",
+      "description": "Показ точек попаданий",
+      "aliases": [
+        "sv_showimpacts"
+      ],
+      "parameters": {
+        "mode": {
+          "type": "enum",
+          "description": "Источник точек",
+          "values": [
+            "both",
+            "client",
+            "server"
+          ],
+          "default": "both"
+        }
+      },
+      "example": "game give self impacts mode=both",
+      "modes": [
+        "Competitive",
+        "Sandbox",
+        "Community"
+      ],
+      "scope": "player",
+      "capability": "modifier.self",
+      "requiresSvCheats": true,
+      "maxActivationsPerMatch": 3,
+      "durationRounds": 2,
+      "lifetime": "roundLease"
+    },
+    {
+      "name": "rethrow",
+      "description": "Однократный повтор последней собственной гранаты",
+      "aliases": [
+        "sv_rethrow_last_grenade"
+      ],
+      "parameters": {
+        "source": {
+          "type": "enum",
+          "description": "Источник",
+          "values": [
+            "self"
+          ],
+          "default": "self"
+        }
+      },
+      "example": "game give self rethrow",
+      "modes": [
+        "Sandbox",
+        "Community"
+      ],
+      "scope": "player",
+      "capability": "modifier.self",
+      "requiresSvCheats": true,
+      "maxActivationsPerMatch": 3,
+      "durationRounds": null,
+      "lifetime": "oneShot"
+    },
+    {
+      "name": "maxmoney",
+      "description": "Временный потолок денег сервера",
+      "aliases": [
+        "mp_maxmoney"
+      ],
+      "parameters": {
+        "amount": {
+          "type": "int",
+          "description": "Лимит денег",
+          "min": 0,
+          "max": 50000,
+          "default": 16000
+        }
+      },
+      "example": "game give all maxmoney amount=16000",
+      "modes": [
+        "Sandbox",
+        "Community"
+      ],
+      "scope": "server",
+      "capability": "server.economy",
+      "requiresSvCheats": true,
+      "maxActivationsPerMatch": 3,
+      "durationRounds": 2,
+      "lifetime": "roundLease"
+    },
+    {
+      "name": "startmoney",
+      "description": "Временная настройка денег при следующей инициализации баланса",
+      "aliases": [
+        "mp_startmoney"
+      ],
+      "parameters": {
+        "amount": {
+          "type": "int",
+          "description": "Начальные деньги",
+          "min": 0,
+          "max": 50000,
+          "default": 800
+        }
+      },
+      "example": "game give all startmoney amount=800",
+      "modes": [
+        "Sandbox",
+        "Community"
+      ],
+      "scope": "server",
+      "capability": "server.economy",
+      "requiresSvCheats": true,
+      "maxActivationsPerMatch": 3,
+      "durationRounds": 2,
+      "lifetime": "roundLease"
+    },
+    {
+      "name": "weapon",
+      "description": "Временное оружие с серверной меткой срока",
+      "aliases": [],
+      "parameters": {
+        "weapon": {
+          "type": "enum",
+          "description": "Тип оружия",
+          "values": [
+            "pistol",
+            "smg",
+            "rifle",
+            "sniper",
+            "shotgun"
+          ],
+          "default": "rifle"
+        },
+        "ammo": {
+          "type": "int",
+          "description": "Боезапас",
+          "min": 0,
+          "max": 200,
+          "default": 90
+        }
+      },
+      "example": "game give self weapon weapon=rifle",
+      "modes": [
+        "Competitive",
+        "Sandbox",
+        "Community"
+      ],
+      "scope": "player",
+      "capability": "modifier.self",
+      "requiresSvCheats": true,
+      "maxActivationsPerMatch": 3,
+      "durationRounds": 2,
+      "lifetime": "roundLease"
+    },
+    {
+      "name": "grenade",
+      "description": "Временная граната; передача не снимает срок",
+      "aliases": [],
+      "parameters": {
+        "grenade": {
+          "type": "enum",
+          "description": "Тип гранаты",
+          "values": [
+            "frag",
+            "flash",
+            "smoke",
+            "molotov"
+          ],
+          "default": "smoke"
+        },
+        "count": {
+          "type": "int",
+          "description": "Количество",
+          "min": 1,
+          "max": 2,
+          "default": 1
+        }
+      },
+      "example": "game give self grenade grenade=smoke",
+      "modes": [
+        "Competitive",
+        "Sandbox",
+        "Community"
+      ],
+      "scope": "player",
+      "capability": "modifier.self",
+      "requiresSvCheats": true,
+      "maxActivationsPerMatch": 3,
+      "durationRounds": 2,
+      "lifetime": "roundLease"
+    },
+    {
+      "name": "health",
+      "description": "Временный бонус здоровья в отдельном слое",
+      "aliases": [],
+      "parameters": {
+        "bonus": {
+          "type": "int",
+          "description": "Дополнительное здоровье",
+          "min": 1,
+          "max": 100,
+          "default": 25
+        }
+      },
+      "example": "game give self health bonus=25",
+      "modes": [
+        "Competitive",
+        "Sandbox",
+        "Community"
+      ],
+      "scope": "player",
+      "capability": "modifier.self",
+      "requiresSvCheats": true,
+      "maxActivationsPerMatch": 3,
+      "durationRounds": 2,
+      "lifetime": "roundLease"
+    },
+    {
+      "name": "damage",
+      "description": "Временный множитель исходящего урона",
+      "aliases": [],
+      "parameters": {
+        "multiplier": {
+          "type": "float",
+          "description": "Множитель",
+          "min": 0.5,
+          "max": 2,
+          "default": 1.25
+        }
+      },
+      "example": "game give self damage multiplier=1.25",
+      "modes": [
+        "Competitive",
+        "Sandbox",
+        "Community"
+      ],
+      "scope": "player",
+      "capability": "modifier.self",
+      "requiresSvCheats": true,
+      "maxActivationsPerMatch": 3,
+      "durationRounds": 2,
+      "lifetime": "roundLease"
+    }
+  ],
+  "commands": [
+    {
+      "name": "game give",
+      "syntax": "game give <игрок|self|all> <модуль> [ключ=значение ...]",
+      "description": "Серверная активация с расходованием квоты"
+    },
+    {
+      "name": "game revoke",
+      "syntax": "game revoke <игрок|self|all> <модуль>",
+      "description": "Отзыв без возврата квоты"
+    },
+    {
+      "name": "game set",
+      "syntax": "game set <модуль> <параметр> <значение>",
+      "description": "Изменить профиль для следующей активации, не текущий эффект"
+    },
+    {
+      "name": "game list",
+      "syntax": "game list",
+      "description": "Список модулей и доступности"
+    },
+    {
+      "name": "game status",
+      "syntax": "game status <игрок|self>",
+      "description": "Оставшиеся активации и сроки эффектов"
+    },
+    {
+      "name": "help",
+      "syntax": "help [команда]",
+      "description": "Справка из каталога"
+    },
+    {
+      "name": "noob",
+      "syntax": "noob on|off",
+      "description": "Подсказки следующего токена и понятные ошибки"
+    }
+  ],
+  "match": {
+    "rounds": 16,
+    "liveRoundSeconds": 120,
+    "sideSwapAfterRound": 8,
+    "tickRate": 64
+  },
+  "policy": {
+    "quotaKey": [
+      "matchId",
+      "accountId",
+      "canonicalModuleId"
+    ],
+    "activationLimit": 3,
+    "effectRounds": 2,
+    "recipientQuota": true,
+    "atomicAll": true,
+    "competitiveHiddenEnemyReplication": false
+  }
+}

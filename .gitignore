@@ -1,4 +1,4 @@
-﻿*.blend
+*.blend
 *.blend1
 *.glb
 *.png
@@ -6,6 +6,11 @@
 *.jpeg
 generated/
 .godot/
+game/.godot/
+game/assets/weapons/*.glb
 bin/
 obj/
 __pycache__/
+.vs/
+*.user
+*.import
