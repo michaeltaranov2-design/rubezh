@@ -3,35 +3,83 @@ using Rubezh.Core;
 
 namespace Rubezh.Game;
 
+/// <summary>Сборка greybox-карты: меши, коллизии, окклюдеры, LOD, навмеш, LightmapGI.</summary>
 public static class MapBuilder
 {
     static StandardMaterial3D[]? _mats;
+    public static int LastOccluders;
+    public static int LastMeshes;
 
-    public static Node3D Build(Node parent)
+    public static Node3D Build(Node parent) => Build(parent, MapRuntime.Current);
+
+    public static Node3D Build(Node parent, MapDef map)
     {
-        var root = new Node3D { Name = "MapUzel" };
+        string name = map.Id == MapUzel.Id ? "MapUzel" : map.Id == MapKlin.Id ? "MapKlin" : map.Id == MapHorda.Id ? "MapHorda" : "Map";
+        var root = new Node3D { Name = name };
         parent.AddChild(root);
         var mats = Mats();
-        foreach (var box in MapUzel.Boxes)
+        var nav = new NavigationRegion3D { Name = "Nav" };
+        nav.NavigationMesh = new NavigationMesh
         {
-            var mesh = new BoxMesh { Size = Conv.G(box.Size) };
+            AgentRadius = map.BotRadius,
+            AgentHeight = 1.8f,
+            AgentMaxClimb = 0.4f,
+            CellSize = 0.2f,
+            CellHeight = 0.2f,
+            GeometryParsedGeometryType = NavigationMesh.ParsedGeometryType.StaticColliders,
+            GeometrySourceGeometryMode = NavigationMesh.SourceGeometryMode.RootNodeChildren
+        };
+        root.AddChild(nav);
+        LastOccluders = 0;
+        LastMeshes = 0;
+        foreach (var box in map.Boxes)
+        {
+            var primitive = new BoxMesh { Size = Conv.G(box.Size) };
+            var mesh = new ArrayMesh();
+            mesh.AddSurfaceFromArrays(Mesh.PrimitiveType.Triangles, primitive.GetMeshArrays());
+            mesh.LightmapUnwrap(Transform3D.Identity, 0.1f);
             var mi = new MeshInstance3D { Mesh = mesh, MaterialOverride = mats[box.Material] };
             mi.Position = Conv.G(box.Center);
-            mi.CastShadow = GeometryInstance3D.ShadowCastingSetting.Off;
-            root.AddChild(mi);
+            mi.GIMode = GeometryInstance3D.GIModeEnum.Static;
+            mi.CastShadow = GameSettings.Quality == "low"
+                ? GeometryInstance3D.ShadowCastingSetting.Off
+                : GeometryInstance3D.ShadowCastingSetting.On;
+            if (box.Material == MapMaterial.Crate)
+            {
+                mi.VisibilityRangeEnd = 40f;
+                mi.VisibilityRangeEndMargin = 8f;
+            }
+            else if (box.Material == MapMaterial.Wall)
+            {
+                mi.VisibilityRangeEnd = 90f;
+                mi.VisibilityRangeEndMargin = 10f;
+            }
+            nav.AddChild(mi);
+            LastMeshes++;
             if (!box.Solid) continue;
             var body = new StaticBody3D();
             body.CollisionLayer = Layers.World;
             body.CollisionMask = 0;
-            var col = new CollisionShape3D { Shape = new BoxShape3D { Size = Conv.G(box.Size) } };
-            body.AddChild(col);
             body.Position = Conv.G(box.Center);
-            root.AddChild(body);
+            body.AddChild(new CollisionShape3D { Shape = new BoxShape3D { Size = Conv.G(box.Size) } });
+            nav.AddChild(body);
+            if (box.Material == MapMaterial.Wall || box.Material == MapMaterial.Outer || box.Material == MapMaterial.Crate)
+            {
+                var oc = new OccluderInstance3D();
+                oc.Occluder = new BoxOccluder3D { Size = Conv.G(box.Size) };
+                oc.Position = Conv.G(box.Center);
+                root.AddChild(oc);
+                LastOccluders++;
+            }
         }
-        AddSiteLabel(root, new Vector3(20, 2.4f, 0), "A");
-        AddSiteLabel(root, new Vector3(-20, 2.4f, 0), "B");
+        nav.BakeNavigationMesh();
+        var a = (map.SiteAMin + map.SiteAMax) * 0.5f;
+        var b = (map.SiteBMin + map.SiteBMax) * 0.5f;
+        AddSiteLabel(root, new Vector3(a.X, 2.4f, a.Z), "A");
+        AddSiteLabel(root, new Vector3(b.X, 2.4f, b.Z), "B");
         AddLight(root);
         AddWorldEnv(root);
+        AddGi(root);
         return root;
     }
 
@@ -61,8 +109,17 @@ public static class MapBuilder
         env.AmbientLightSource = Godot.Environment.AmbientSource.Color;
         env.AmbientLightColor = new Color(0.62f, 0.66f, 0.72f);
         env.AmbientLightEnergy = 0.45f;
-        var we = new WorldEnvironment { Environment = env };
-        root.AddChild(we);
+        root.AddChild(new WorldEnvironment { Environment = env });
+    }
+
+    static void AddGi(Node3D root)
+    {
+        var gi = new LightmapGI { Name = "LightmapGI" };
+        gi.Quality = LightmapGI.BakeQuality.Low;
+        gi.MaxTextureSize = 2048;
+        gi.Directional = false;
+        gi.UseDenoiser = false;
+        root.AddChild(gi);
     }
 
     static StandardMaterial3D[] Mats()
@@ -85,8 +142,8 @@ public static class MapBuilder
             {
                 AlbedoColor = cols[i],
                 AlbedoTexture = tex,
-                Uv1Scale = new Vector3(2, 2, 2),
-                Roughness = 0.85f
+                Uv1Scale = new Vector3(0.25f, 0.25f, 0.25f),
+                TextureFilter = BaseMaterial3D.TextureFilterEnum.Nearest
             };
         }
         return _mats;
@@ -97,7 +154,7 @@ public static class MapBuilder
         var img = Image.CreateEmpty(8, 8, false, Image.Format.Rgb8);
         for (int y = 0; y < 8; y++)
             for (int x = 0; x < 8; x++)
-                img.SetPixel(x, y, ((x + y) & 1) == 0 ? new Color(0.92f, 0.92f, 0.9f) : new Color(0.72f, 0.72f, 0.7f));
+                img.SetPixel(x, y, ((x + y) & 1) == 0 ? Colors.White : new Color(0.7f, 0.7f, 0.7f));
         return ImageTexture.CreateFromImage(img);
     }
 }

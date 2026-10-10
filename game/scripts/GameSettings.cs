@@ -8,6 +8,7 @@ public static class GameSettings
     public static float Sensitivity = 0.022f;
     public static int MaxFps = 60;
     public static string Quality = "low";
+    public static string MapId = "uzel_greybox";
     public static float CrosshairSize = 8f;
     public static float CrosshairGap = 4f;
     public static Color CrosshairColor = new(0.2f, 1f, 0.35f, 0.9f);
@@ -20,6 +21,7 @@ public static class GameSettings
         Fov = (float)cfg.GetValue("video", "fov", Fov);
         MaxFps = (int)cfg.GetValue("video", "max_fps", MaxFps);
         Quality = (string)cfg.GetValue("video", "quality", Quality);
+        MapId = (string)cfg.GetValue("video", "map", MapId);
         Sensitivity = (float)cfg.GetValue("input", "sensitivity", Sensitivity);
     }
 
@@ -29,6 +31,7 @@ public static class GameSettings
         cfg.SetValue("video", "fov", Fov);
         cfg.SetValue("video", "max_fps", MaxFps);
         cfg.SetValue("video", "quality", Quality);
+        cfg.SetValue("video", "map", MapId);
         cfg.SetValue("input", "sensitivity", Sensitivity);
         cfg.Save(Path);
     }

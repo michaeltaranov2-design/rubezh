@@ -9,7 +9,7 @@ public partial class Main : Node3D
 {
     Player _player = null!;
     Bot[] _bots = Array.Empty<Bot>();
-    bool _selfTest, _profile, _done;
+    bool _selfTest, _profile, _mapsTest, _done;
     string _profileOut = "user://profile-stage1.json";
     double _profStart, _sampleFor;
     int _samples; double _fpsSum, _fpsMin = 1e9, _fpsMax;
@@ -22,30 +22,35 @@ public partial class Main : Node3D
         {
             if (a == "--self-test") _selfTest = true;
             if (a == "--profile") _profile = true;
+            if (a == "--maps-test") _mapsTest = true;
             if (a.StartsWith("--profile-out=", StringComparison.Ordinal)) _profileOut = a.Substring("--profile-out=".Length);
         }
         GameSettings.Load();
         InputSetup.Register();
+        MapRuntime.ResolveFromArgs();
         if (_profile) { Engine.MaxFps = 0; DisplayServer.WindowSetVsyncMode(DisplayServer.VSyncMode.Disabled); }
         else Engine.MaxFps = GameSettings.MaxFps;
-        MapBuilder.Build(this);
-        GameSettings.ApplyGraphics(GetViewport(), GetNodeOrNull<DirectionalLight3D>("MapUzel/Sun"));
+        MapRuntime.BuildInto(this);
+        GameSettings.ApplyGraphics(GetViewport(), MapRuntime.Root?.GetNodeOrNull<DirectionalLight3D>("Sun"));
         Combat.Pool = new ImpactPool();
         AddChild(Combat.Pool);
         var hud = new Hud(); AddChild(hud);
         _player = new Player();
         AddChild(_player);
         _player.Hud = hud;
-        _player.Place(Conv.G(MapUzel.TSpawns[0]), 0f);
-        _bots = new Bot[4];
-        for (int i = 0; i < 4; i++)
+        var spawn = MapRuntime.Current.TSpawns.Length > 0 ? MapRuntime.Current.TSpawns[0] : MapUzel.TSpawns[0];
+        _player.Place(Conv.G(spawn), 0f);
+        int nCt = Math.Min(4, MapRuntime.Current.CtSpawns.Length);
+        _bots = new Bot[nCt];
+        for (int i = 0; i < nCt; i++)
         {
             var b = new Bot();
             AddChild(b);
-            b.Init(1, Conv.G(MapUzel.CtSpawns[i]), Mathf.Pi, _player, (uint)(1000 + i));
+            b.Init(1, Conv.G(MapRuntime.Current.CtSpawns[i]), Mathf.Pi, _player, (uint)(1000 + i));
             _bots[i] = b;
         }
-        if (_selfTest) CallDeferred(nameof(RunSelfTest));
+        if (_mapsTest) CallDeferred(nameof(RunMapsTest));
+        else if (_selfTest) CallDeferred(nameof(RunSelfTest));
         if (_profile) { _profStart = Time.GetTicksMsec() / 1000.0; _sampleFor = 8; }
     }
 
@@ -83,12 +88,39 @@ public partial class Main : Node3D
             GetTree().CreateTimer(1.0).Timeout += () =>
             {
                 Input.ActionRelease("move_forward");
-                float moved = new Godot.Vector2(_player.GlobalPosition.X - Conv.G(MapUzel.TSpawns[0]).X, _player.GlobalPosition.Z - Conv.G(MapUzel.TSpawns[0]).Z).Length();
+                var s = Conv.G(MapRuntime.Current.TSpawns[0]);
+                float moved = new Godot.Vector2(_player.GlobalPosition.X - s.X, _player.GlobalPosition.Z - s.Z).Length();
                 if (moved < 3f || moved > 8f) Fail("самопроверка: ход игрока " + moved.ToString("0.00", CultureInfo.InvariantCulture) + " м");
                 FinishSelfTest();
             };
         }
         catch (Exception e) { Fail("исключение: " + e.Message); FinishSelfTest(); }
+    }
+
+    void RunMapsTest()
+    {
+        try
+        {
+            foreach (var map in MapCatalog.All())
+            {
+                if (MapRuntime.Root != null) { MapRuntime.Root.Free(); MapRuntime.Root = null; }
+                MapRuntime.Current = map;
+                var root = MapRuntime.BuildInto(this);
+                if (root.GetNodeOrNull("Nav") == null) Fail(map.Id + ": нет Nav");
+                if (root.GetNodeOrNull("LightmapGI") == null) Fail(map.Id + ": нет LightmapGI");
+                if (root.GetNodeOrNull("Sun") == null) Fail(map.Id + ": нет Sun");
+                if (MapBuilder.LastOccluders < 3) Fail(map.Id + ": мало окклюдеров " + MapBuilder.LastOccluders);
+                if (MapBuilder.LastMeshes < 8) Fail(map.Id + ": мало мешей " + MapBuilder.LastMeshes);
+                var r = BotNavSim.Run(map, 20, 7);
+                if (!r.Ok) Fail(map.Id + " 20 раундов stuck=" + r.Stuck + " fall=" + r.Falls);
+            }
+            var bad = MapRuntime.TryLoadUserGltf("res://missing.glb");
+            if (bad == null) Fail("отсутствующий glb должен отклоняться");
+        }
+        catch (Exception e) { Fail("исключение: " + e.Message); }
+        if (_fail == 0) GD.Print("MAPS_SELFTEST_OK");
+        else GD.Print("MAPS_SELFTEST_FAIL " + _fail);
+        GetTree().Quit(_fail == 0 ? 0 : 1);
     }
 
     void Fail(string m) { _fail++; GD.PrintErr("[self-test] " + m); }

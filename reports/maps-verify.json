@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "failed": [],
+  "steps": [
+    {
+      "name": "stage2-tests",
+      "ok": true,
+      "log": "[Раунды]\n  OK   заморозка и стартовые 800\n  OK   нельзя купить дороже денег\n  OK   покупка в заморозке\n  OK   после 15 с — живая фаза\n  OK   покупка закрыта в live\n  OK   T выигрывает зачисткой\n  OK   следующий раунд\n  OK   закладка бомбы\n  OK   разминирование\n  OK   взрыв бомбы\n  OK   таймаут — CT\n  OK   смена сторон после 8\n  OK   16 раундов, без овертайма\n[Карты]\n  OK   три карты\n  OK   компактная/средняя/большая\n  OK   Клин проходима\n  OK   klin_greybox лицензия\n  OK   Узел проходима\n  OK   uzel_greybox лицензия\n  OK   Хорда проходима\n  OK   horda_greybox лицензия\n[Гранаты]\n  OK   урон в эпицентре\n  OK   за радиусом 0\n  OK   флеш и смок\n  OK   молотов\n[Загрузчик]\n  OK   пустой файл отклонён\n  OK   мусор отклонён\n  OK   внешний URI отклонён\n  OK   валидный glTF JSON принят\n[Боты 20 раундов]\n  OK   Клин 20 раундов stuck=0 fall=0\n  OK   Узел 20 раундов stuck=0 fall=0\n  OK   Хорда 20 раундов stuck=0 fall=0\n[Магазин]\n  OK   цена винтовки\n  OK   молотов только T\n  OK   полный набор оружия и гранат\nИтого: пройдено 35, провалено 0\n"
+    },
+    {
+      "name": "game-build",
+      "ok": true,
+      "log": "  Определение проектов для восстановления...\n  Все проекты обновлены для восстановления.\n  Rubezh -> C:\\Users\\g3raa\\AppData\\Roaming\\ai.sider.desktop\\profiles\\U0Y3H3JR96L\\workspaces\\166f8d92-551a-41d6-957e-04f62b98e7e6\\rubezh\\game\\.godot\\mono\\temp\\bin\\Debug\\Rubezh.dll\n\nСборка успешно завершена.\n    Предупреждений: 0\n    Ошибок: 0\n\nПрошло времени 00:00:00.75\n"
+    },
+    {
+      "name": "godot-import",
+      "ok": true,
+      "log": "Godot Engine v4.7.2.stable.mono.official.ed1daf0bf - https://godotengine.org\n\n[   0% ] \u001b[90m\u001b[1mfirst_scan_filesystem\u001b[22m | Started Инициализация проекта (5 steps)\u001b[39m\u001b[0m\n[   0% ] \u001b[90m\u001b[1mfirst_scan_filesystem\u001b[22m | Сканирование структуры файлов…\u001b[39m\u001b[0m\n[  16% ] \u001b[90m\u001b[1mfirst_scan_filesystem\u001b[22m | Загрузка глобальных имен классов…\u001b[39m\u001b[0m\n[  33% ] \u001b[90m\u001b[1mfirst_scan_filesystem\u001b[22m | Проверка GDExtensions…\u001b[39m\u001b[0m\n[  50% ] \u001b[90m\u001b[1mfirst_scan_filesystem\u001b[22m | Создание скриптов автозагрузки…\u001b[39m\u001b[0m\n[  66% ] \u001b[90m\u001b[1mfirst_scan_filesystem\u001b[22m | Инициализация плагинов…\u001b[39m\u001b[0m\n[  83% ] \u001b[90m\u001b[1mfirst_scan_filesystem\u001b[22m | Начало сканирование файлов…\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mfirst_scan_filesystem\u001b[22m\n\u001b[0m\n[   0% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Started Загрузка редактора (5 steps)\u001b[39m\u001b[0m\n[   0% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Загрузка макета редактора…\u001b[39m\u001b[0m\n[  16% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Загрузка док-панели…\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mloading_editor_layout\u001b[22m\n\u001b[0m\n"
+    },
+    {
+      "name": "godot-maps-test",
+      "ok": true,
+      "log": "Godot Engine v4.7.2.stable.mono.official.ed1daf0bf - https://godotengine.org\n\nMAPS_SELFTEST_OK\n"
+    }
+  ]
+}

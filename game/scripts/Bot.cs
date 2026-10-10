@@ -108,8 +108,10 @@ public partial class Bot : CharacterBody3D, IDamageable
 
     void Patrol(ref MoveInput input, float dt)
     {
-        if (_wp < 0) _wp = NearestWp();
-        var wp = Conv.G(MapUzel.Waypoints[_wp]);
+        var map = MapRuntime.Current;
+        if (map.Waypoints.Length == 0) return;
+        if (_wp < 0 || _wp >= map.Waypoints.Length) _wp = NearestWp();
+        var wp = Conv.G(map.Waypoints[_wp]);
         Godot.Vector3 d = wp - GlobalPosition; d.Y = 0;
         if (d.Length() < 1.2f) PickNext();
         else
@@ -160,9 +162,10 @@ public partial class Bot : CharacterBody3D, IDamageable
     {
         int best = 0; float bestD = float.MaxValue;
         var p = Conv.N(GlobalPosition);
-        for (int i = 0; i < MapUzel.Waypoints.Length; i++)
+        var wps = MapRuntime.Current.Waypoints;
+        for (int i = 0; i < wps.Length; i++)
         {
-            float d = System.Numerics.Vector3.Distance(p, MapUzel.Waypoints[i]);
+            float d = System.Numerics.Vector3.Distance(p, wps[i]);
             if (d < bestD) { bestD = d; best = i; }
         }
         return best;
@@ -170,10 +173,11 @@ public partial class Bot : CharacterBody3D, IDamageable
 
     void PickNext()
     {
-        var n = MapUzel.Neighbors[_wp];
-        if (n.Length == 0) return;
-        int pick = n[(int)(WeaponCore.NextFloat(ref _rng) * n.Length) % n.Length];
-        if (n.Length > 1 && pick == _prevWp) pick = n[(pick + 1) % n.Length];
+        var n = MapRuntime.Current.Neighbors;
+        if (_wp < 0 || _wp >= n.Length || n[_wp].Length == 0) return;
+        var nb = n[_wp];
+        int pick = nb[(int)(WeaponCore.NextFloat(ref _rng) * nb.Length) % nb.Length];
+        if (nb.Length > 1 && pick == _prevWp) pick = nb[(pick + 1) % nb.Length];
         _prevWp = _wp; _wp = pick;
     }
 
