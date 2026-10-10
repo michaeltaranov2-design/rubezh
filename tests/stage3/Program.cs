@@ -12,7 +12,7 @@ public static class Program
     public static int Main()
     {
         Console.OutputEncoding = Encoding.UTF8;
-        Proto(); Server(); Pvs(); Cons(); Predict(); Channel();
+        Proto(); Server(); Pvs(); Cons(); Predict(); Channel(); Acc(); Ded();
         Console.WriteLine("Итого: пройдено " + _ok + ", провалено " + _fail);
         return _fail == 0 && _ok > 0 ? 0 : 1;
     }
@@ -116,5 +116,69 @@ public static class Program
         Span<byte> r = stackalloc byte[64];
         while (ch.Recv(r) > 0) got++;
         Check(got > 0 && got != sent, "loss/dup/reorder меняют поток");
+    }
+
+    static void Acc()
+    {
+        Console.WriteLine("[Аккаунты]");
+        using var a = new AccountServer();
+        Check(a.Login("player", "bad") == null, "плохой пароль");
+        var s = a.Login("player", "rubezh");
+        Check(s != null && !s.Value.Admin, "player не admin");
+        var ad = a.Login("admin", "rubezh-admin");
+        Check(ad != null && ad.Value.Admin, "admin флаг");
+        Check(a.Join(s!.Value.Token) == 0, "join слот 0");
+        Check(a.Join(s.Value.Token) == 0, "join идемпотентен");
+        Check(a.Join("нет") == null, "битый токен");
+        Check(!a.IsAdmin(s.Value.Token), "lobby-токен не admin");
+        if (a.StartHttp())
+        {
+            try
+            {
+                using var http = new System.Net.Http.HttpClient { Timeout = TimeSpan.FromSeconds(2) };
+                var url = "http://127.0.0.1:" + a.Port;
+                var login = http.PostAsync(url + "/v1/login", new System.Net.Http.StringContent("{\"user\":\"player\",\"pass\":\"rubezh\"}", Encoding.UTF8, "application/json")).Result;
+                var body = login.Content.ReadAsStringAsync().Result;
+                Check(login.IsSuccessStatusCode && body.Contains("token"), "HTTP login");
+                var tok = Field(body, "token");
+                var join = http.PostAsync(url + "/v1/join", new System.Net.Http.StringContent("{\"token\":\"" + tok + "\"}", Encoding.UTF8, "application/json")).Result;
+                var jb = join.Content.ReadAsStringAsync().Result;
+                Check(join.IsSuccessStatusCode && jb.Contains("\"admin\":false"), "HTTP join без admin");
+            }
+            catch (Exception e) { Check(false, "HTTP: " + e.Message); }
+            a.StopHttp();
+        }
+        else Check(true, "HTTP недоступен, in-memory ок");
+    }
+
+    static string Field(string json, string key)
+    {
+        string pat = "\"" + key + "\":\"";
+        int i = json.IndexOf(pat, StringComparison.Ordinal);
+        if (i < 0) return "";
+        i += pat.Length;
+        int j = json.IndexOf('"', i);
+        return j < 0 ? "" : json.Substring(i, j - i);
+    }
+
+    static void Ded()
+    {
+        Console.WriteLine("[Dedicated]");
+        var d = new DedicatedLoop();
+        var cmd = new InputCommand { Seq = 1, Slot = 0, Flags = 1 };
+        Check(!d.PushInput(0, cmd), "ввод без авторизации");
+        var s = d.Accounts.Login("player", "rubezh");
+        var slot = d.Authorize(s!.Value.Token);
+        Check(slot == 0, "authorize слот 0");
+        Check(!d.PushInput(0, new InputCommand { Seq = 1, Slot = 3, Flags = 1 }), "подмена slot отклонена");
+        Check(d.PushInput(0, cmd), "ввод после join");
+        int n = d.TickAccum(0.05f);
+        Check(n >= 3 && n <= 8, "64 Гц: 50 мс → несколько тиков");
+        var snap = d.Snapshot(0);
+        Span<byte> buf = stackalloc byte[NetProto.Mtu];
+        Check(snap.Write(buf) <= NetProto.Mtu, "снимок dedicated в MTU");
+        Span<byte> ab = stackalloc byte[64];
+        int an = NetAuth.Write(ab, s.Value.Token);
+        Check(an > 0 && NetAuth.TryRead(ab[..an], out var tok) && tok == s.Value.Token, "handshake token");
     }
 }

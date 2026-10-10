@@ -9,12 +9,14 @@ public partial class Main : Node3D
 {
     Player _player = null!;
     Bot[] _bots = Array.Empty<Bot>();
-    bool _selfTest, _profile, _mapsTest, _done;
+    bool _selfTest, _profile, _mapsTest, _dedicated, _netTest, _done;
+    string _connect = "";
     string _profileOut = "user://profile-stage1.json";
     double _profStart, _sampleFor;
     int _samples; double _fpsSum, _fpsMin = 1e9, _fpsMax;
     long _drawMax, _primMax, _memMax;
     int _fail;
+    NetHost? _net;
 
     public override void _Ready()
     {
@@ -23,6 +25,9 @@ public partial class Main : Node3D
             if (a == "--self-test") _selfTest = true;
             if (a == "--profile") _profile = true;
             if (a == "--maps-test") _mapsTest = true;
+            if (a == "--dedicated") _dedicated = true;
+            if (a == "--net-test") _netTest = true;
+            if (a.StartsWith("--connect=", StringComparison.Ordinal)) _connect = a.Substring(10);
             if (a.StartsWith("--profile-out=", StringComparison.Ordinal)) _profileOut = a.Substring("--profile-out=".Length);
         }
         GameSettings.Load();
@@ -34,12 +39,36 @@ public partial class Main : Node3D
         GameSettings.ApplyGraphics(GetViewport(), MapRuntime.Root?.GetNodeOrNull<DirectionalLight3D>("Sun"));
         Combat.Pool = new ImpactPool();
         AddChild(Combat.Pool);
+        if (_dedicated)
+        {
+            _net = new NetHost();
+            AddChild(_net);
+            _net.Loop = new DedicatedLoop(MapRuntime.Current);
+            _net.Loop.Accounts.StartHttp();
+            var e = _net.Listen();
+            if (e != Error.Ok) GD.PrintErr("[net] listen: " + e);
+            GD.Print("DEDICATED_LISTEN " + DedicatedLoop.GamePort);
+            if (_netTest) CallDeferred(nameof(RunNetTest));
+            return;
+        }
         var hud = new Hud(); AddChild(hud);
         _player = new Player();
         AddChild(_player);
         _player.Hud = hud;
         var spawn = MapRuntime.Current.TSpawns.Length > 0 ? MapRuntime.Current.TSpawns[0] : MapUzel.TSpawns[0];
         _player.Place(Conv.G(spawn), 0f);
+        if (_connect.Length > 0)
+        {
+            _net = new NetHost();
+            AddChild(_net);
+            var host = _connect; int port = DedicatedLoop.GamePort;
+            int c = host.LastIndexOf(':');
+            if (c > 0 && int.TryParse(host.AsSpan(c + 1), out int p)) { port = p; host = host.Substring(0, c); }
+            _net.Connect(host, port);
+            GD.Print("NET_CONNECT " + host + ":" + port);
+            if (_selfTest) CallDeferred(nameof(RunSelfTest));
+            return;
+        }
         int nCt = Math.Min(4, MapRuntime.Current.CtSpawns.Length);
         _bots = new Bot[nCt];
         for (int i = 0; i < nCt; i++)
@@ -69,12 +98,42 @@ public partial class Main : Node3D
         if (now - _profStart > 1.5 + _sampleFor) WriteProfile();
     }
 
+    void RunNetTest()
+    {
+        try
+        {
+            if (_net == null) Fail("нет NetHost");
+            else
+            {
+                var s = _net.Loop.Accounts.Login("player", "rubezh");
+                if (s == null) Fail("login");
+                else
+                {
+                    var slot = _net.Loop.Authorize(s.Value.Token);
+                    if (slot == null) Fail("join");
+                    else
+                    {
+                        var cmd = new InputCommand { Seq = 1, Slot = (byte)slot.Value, Flags = 1 };
+                        if (!_net.Loop.PushInput(slot.Value, cmd)) Fail("push");
+                        _net.Loop.TickAccum(0.05f);
+                        var snap = _net.Loop.Snapshot((byte)slot.Value);
+                        if (snap.Viewer != slot.Value) Fail("viewer");
+                    }
+                }
+            }
+        }
+        catch (Exception e) { Fail("исключение: " + e.Message); }
+        if (_fail == 0) GD.Print("STAGE3_NET_OK");
+        else GD.Print("STAGE3_NET_FAIL " + _fail);
+        GetTree().Quit(_fail == 0 ? 0 : 1);
+    }
+
     void RunSelfTest()
     {
         try
         {
             if (_player == null) Fail("игрок не создан");
-            if (_bots.Length != 4) Fail("ожидалось 4 бота");
+            if (_bots.Length != 4 && _connect.Length == 0) Fail("ожидалось 4 бота");
             var dummy = new Bot();
             AddChild(dummy);
             dummy.AiEnabled = false;
