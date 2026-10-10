@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "maps": [
+    {"id":"klin_greybox","name":"Клин","size":"compact","author":"Рубеж","license":"CC0-1.0","source":"procedural greybox","bounds":[40,32],"triangleBudget":5000,"memoryBudgetKb":16384},
+    {"id":"uzel_greybox","name":"Узел","size":"medium","author":"Рубеж","license":"CC0-1.0","source":"procedural greybox","bounds":[64,48],"triangleBudget":8000,"memoryBudgetKb":24576},
+    {"id":"horda_greybox","name":"Хорда","size":"large","author":"Рубеж","license":"CC0-1.0","source":"procedural greybox","bounds":[96,64],"triangleBudget":14000,"memoryBudgetKb":49152}
+  ]
+}
