@@ -53,6 +53,16 @@ public sealed class SimServer
         _has[cmd.Slot] = true;
     }
 
+    public ConsoleResult Give(byte slot, string line, uint nonce)
+    {
+        if (slot >= 10) return new(false, "slot");
+        var p = Players[slot];
+        var r = Console.Execute(line, p.AccountId, nonce);
+        if (r.Ok && r.Code == "ok" && Console.LastHealthBonus > 0)
+            p.Hp = Math.Min(200, p.Hp + Console.LastHealthBonus);
+        return r;
+    }
+
     public void Step()
     {
         Tick++;
@@ -67,7 +77,12 @@ public sealed class SimServer
             p.LastSeq = cmd.Seq;
             p.Yaw = cmd.Yaw;
             var inp = cmd.ToMove();
+            if (Console.AutoJump(p.AccountId) && p.Move.OnGround) inp.JumpPressed = true;
+            float oldB = MoveCfg.BhopSpeedLimit, oldA = MoveCfg.AirStrafeLimit;
+            Console.ApplyMove(MoveCfg, p.AccountId);
             MovementCore.Step(ref p.Move, inp, MoveCfg, dt);
+            MoveCfg.BhopSpeedLimit = oldB;
+            MoveCfg.AirStrafeLimit = oldA;
             var next = p.Pos + p.Move.Velocity * dt;
             if (!Blocked(p.Pos, next)) p.Pos = next;
             else { p.Move.Velocity.X = 0; p.Move.Velocity.Z = 0; }
@@ -110,7 +125,8 @@ public sealed class SimServer
             best = dist; hit = t;
         }
         if (hit == null) return;
-        hit.Hp -= 34;
+        int dmg = Math.Max(1, (int)(34f * Console.DamageMul(shooter.AccountId)));
+        hit.Hp -= dmg;
         if (hit.Hp <= 0) { hit.Hp = 0; Match.Kill(hit.Team); }
     }
 

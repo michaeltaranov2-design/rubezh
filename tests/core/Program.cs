@@ -89,9 +89,12 @@ public static class Program
         Check(s.Velocity.Y < 0, "гравитация действует в воздухе");
 
         var limited = new MovementSettings { BhopSpeedLimit = 7f };
-        s = new MoveState { OnGround = false, Velocity = new Vector3(0, 0, -10f) };
+        s = new MoveState { OnGround = false, Velocity = new Vector3(0, 0, -20f) };
         MovementCore.Step(ref s, none, limited, Dt);
-        Check(Horizontal(s.Velocity) <= 7f + 1e-3f, "лимит скорости bhop соблюдается");
+        Check(Horizontal(s.Velocity) <= 14f + 1e-3f, "лимит скорости bhop соблюдается");
+        s = new MoveState { OnGround = true, Velocity = new Vector3(0, 0, -20f) };
+        MovementCore.Step(ref s, new MoveInput { JumpPressed = true }, limited, Dt);
+        Check(Horizontal(s.Velocity) <= 7f + 1e-3f, "лимит в кадр прыжка");
 
         bool thrown = false;
         try { MovementCore.Step(ref s, none, cfg, 0f); } catch (ArgumentOutOfRangeException) { thrown = true; }

@@ -16,8 +16,10 @@ public sealed class MovementSettings
     public float StopSpeed = 2.0f;
     public float Gravity = 20.3f;
     public float JumpSpeed = 7.3f;
-    /// <summary>0 — без ограничения. Значение задаёт модуль bhop (этап 4).</summary>
-    public float BhopSpeedLimit;
+    /// <summary>Потолок горизонтали в кадр прыжка. 0 — без ограничения. Без модуля: 25.</summary>
+    public float BhopSpeedLimit = 25f;
+    /// <summary>Потолок air-strafe. 0 — 2× BhopSpeedLimit. Без модуля: 50.</summary>
+    public float AirStrafeLimit;
 }
 
 public struct MoveInput
@@ -35,7 +37,7 @@ public struct MoveState
 
 /// <summary>
 /// Детерминированное движение без зависимостей от движка. Используется игроком, ботами,
-/// а на этапе 3 — сервером и клиентским предсказанием. Без выделений памяти.
+/// сервером и клиентским предсказанием. Без выделений памяти.
 /// </summary>
 public static class MovementCore
 {
@@ -74,7 +76,8 @@ public static class MovementCore
         {
             AddSpeed(ref s.Velocity, wx, wz, MathF.Min(wishSpeed, cfg.AirWishSpeedCap), cfg.AirAccelerate * wishSpeed * dt);
             s.Velocity.Y -= cfg.Gravity * dt;
-            if (cfg.BhopSpeedLimit > 0f) ClampHorizontal(ref s.Velocity, cfg.BhopSpeedLimit);
+            float air = cfg.AirStrafeLimit > 0f ? cfg.AirStrafeLimit : (cfg.BhopSpeedLimit > 0f ? cfg.BhopSpeedLimit * 2f : 0f);
+            if (air > 0f) ClampHorizontal(ref s.Velocity, air);
         }
     }
 
@@ -83,17 +86,19 @@ public static class MovementCore
     static void ApplyFriction(ref Vector3 v, MovementSettings cfg, float dt)
     {
         float speed = HorizontalSpeed(v);
-        if (speed < 1e-4f) { v.X = 0f; v.Z = 0f; return; }
-        float drop = MathF.Max(speed, cfg.StopSpeed) * cfg.Friction * dt;
-        float scale = MathF.Max(speed - drop, 0f) / speed;
-        v.X *= scale;
-        v.Z *= scale;
+        if (speed < 1e-5f) { v.X = 0; v.Z = 0; return; }
+        float control = MathF.Max(speed, cfg.StopSpeed);
+        float drop = control * cfg.Friction * dt;
+        float k = MathF.Max(speed - drop, 0f) / speed;
+        v.X *= k;
+        v.Z *= k;
     }
 
-    static void AddSpeed(ref Vector3 v, float wx, float wz, float targetSpeed, float maxGain)
+    static void AddSpeed(ref Vector3 v, float wx, float wz, float wishSpeed, float maxGain)
     {
-        if (targetSpeed <= 0f || maxGain <= 0f) return;
-        float add = targetSpeed - (v.X * wx + v.Z * wz);
+        if (wishSpeed <= 0f || maxGain <= 0f) return;
+        float current = v.X * wx + v.Z * wz;
+        float add = wishSpeed - current;
         if (add <= 0f) return;
         float gain = MathF.Min(maxGain, add);
         v.X += gain * wx;
